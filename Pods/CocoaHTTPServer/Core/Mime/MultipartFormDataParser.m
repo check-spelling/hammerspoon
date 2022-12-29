@@ -202,7 +202,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 			// we won't parse header parts, as they won't be too large.
 			int headerEnd = [self findHeaderEnd:workingData fromOffset:offset];
 			if( -1 == headerEnd ) {
-				// didn't recieve the full header yet.
+				// didn't receive the full header yet.
 				if( !pendingData.length) {
 					// store the unprocessed data till next chunks come
 					[pendingData appendBytes:data.bytes + offset length:data.length - offset];
