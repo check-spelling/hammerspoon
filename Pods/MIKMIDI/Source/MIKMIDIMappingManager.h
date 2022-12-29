@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  a unique name is used for the newly imported mapping, preserving both mapping files.
  *
  *  @param URL             The fileURL for the mapping file to be imported. Should not be nil.
- *  @param shouldOverwrite YES if an existing mapping with the same file name should be overwitten, NO to use a unique file name for the newly imported mapping.
+ *  @param shouldOverwrite YES if an existing mapping with the same file name should be overwritten, NO to use a unique file name for the newly imported mapping.
  *  @param error           Pointer to an NSError used to return information about an error, if any.
  *
  *  @return An MIKMIDIMapping instance for the imported file, or nil if there was an error.
