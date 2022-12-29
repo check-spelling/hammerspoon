@@ -123,7 +123,7 @@ typedef NS_ERROR_ENUM(GCDAsyncSocketErrorDomain, GCDAsyncSocketError) {
  * By default, both IPv4 and IPv6 are enabled.
  * 
  * For accepting incoming connections, this means GCDAsyncSocket automatically supports both protocols,
- * and can simulataneously accept incoming connections on either protocol.
+ * and can simultaneously accept incoming connections on either protocol.
  * 
  * For outgoing connections, this means GCDAsyncSocket can connect to remote hosts running either protocol.
  * If a DNS lookup returns only IPv4 results, GCDAsyncSocket will automatically use IPv4.
