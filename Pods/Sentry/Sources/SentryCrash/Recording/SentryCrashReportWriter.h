@@ -141,7 +141,7 @@ typedef struct SentryCrashReportWriter {
      *
      * @param value A pointer to the binary data.
      *
-     * @paramn length The length of the data.
+     * @param length The length of the data.
      */
     void (*addDataElement)(const struct SentryCrashReportWriter *writer, const char *name,
         const char *value, const int length);
@@ -160,7 +160,7 @@ typedef struct SentryCrashReportWriter {
      *
      * @param value A pointer to the binary data.
      *
-     * @paramn length The length of the data.
+     * @param length The length of the data.
      */
     void (*appendDataElement)(
         const struct SentryCrashReportWriter *writer, const char *value, const int length);

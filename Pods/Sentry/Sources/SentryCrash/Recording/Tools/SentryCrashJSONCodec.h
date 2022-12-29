@@ -499,7 +499,7 @@ typedef struct SentryCrashJSONDecodeCallbacks {
  *
  * @param userData Any data you would like passed to the callbacks.
  *
- * @oaram errorOffset If not null, will contain the offset into the data
+ * @param errorOffset If not null, will contain the offset into the data
  *                    where the error (if any) occurred.
  *
  * @return SentryCrashJSON_OK if succesful. An error code otherwise.
