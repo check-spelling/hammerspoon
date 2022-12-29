@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param mappingItem The mapping item generated, or nil if mapping failed.
  *  @param messages    The messages used to generate the mapping. May not include all messages received during mapping.
- *  @param error       If mapping failed, an NSError explaing the failure, nil if mapping succeeded.
+ *  @param error       If mapping failed, an NSError explaining the failure, nil if mapping succeeded.
  */
 typedef void(^MIKMIDIMappingGeneratorMappingCompletionBlock)(MIKMIDIMappingItem *mappingItem, MIKArrayOf(MIKMIDICommand *) *messages, NSError *_Nullable error);
 
