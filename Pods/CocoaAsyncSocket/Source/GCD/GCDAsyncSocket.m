@@ -4731,7 +4731,7 @@ enum GCDAsyncSocketConfig
 	if ([preBuffer availableBytes] > 0)
 	{
 		// Only flush the ssl buffers if the prebuffer is empty.
-		// This is to avoid growing the prebuffer inifinitely large.
+		// This is to avoid growing the prebuffer infinitely large.
 		
 		return;
 	}
