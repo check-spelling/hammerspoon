@@ -484,7 +484,7 @@ enum GCDAsyncSocketConfig
 		// the shouldPreBuffer decision is based upon whether the returned value would fit
 		// in the current buffer without requiring a resize of the buffer.
 		// 
-		// This is because, in all likelyhood, the amount read from the socket will be less than the default value.
+		// This is because, in all likelihood, the amount read from the socket will be less than the default value.
 		// Thus we should avoid over-allocating the read buffer when we can simply use the pre-buffer instead.
 		
 		if (shouldPreBufferPtr)
