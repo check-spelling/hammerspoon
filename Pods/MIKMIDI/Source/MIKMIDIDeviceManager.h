@@ -77,7 +77,7 @@ extern NSString * const MIKMIDIEndpointKey;
 
 /**
  *  Used to connect to a MIDI device. Returns a token that must be kept and passed into the
- *  -disconnectConnectionforToken: method.
+ *  -disconnectConnectionForToken: method.
  *
  *  When a connection is made using this method, all of the devices valid source endpoints are connected to. To
  *  connect to specific endpoints only, use -connectInput:error:eventHandler:
@@ -93,7 +93,7 @@ extern NSString * const MIKMIDIEndpointKey;
 
 /**
  *  Used to connect to a single MIDI input/source endpoint. Returns a token that must be kept and passed into the
- *  -disconnectConnectionforToken: method.
+ *  -disconnectConnectionForToken: method.
  *
  *  @param endpoint		An MIKMIDISourceEndpoint instance that should be connected.
  *  @param error		If an error occurs, upon returns contains an NSError object that describes the problem.
@@ -199,7 +199,7 @@ extern NSString * const MIKMIDIEndpointKey;
 @interface MIKMIDIDeviceManager (Deprecated)
 
 /**
- *  @deprecated Use disconnectConnectionforToken: instead. This method now simply calls through to that one.
+ *  @deprecated Use disconnectConnectionForToken: instead. This method now simply calls through to that one.
  *
  *  Disconnects a previously connected MIDI input/source endpoint. The connectionToken argument
  *  must be a token previously returned by -connectInput:error:eventHandler:. Only the
