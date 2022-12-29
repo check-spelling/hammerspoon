@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-/** Converts SentryCrashBinaryImage.uuid to a human readable 36 charactacters long hex
+/** Converts SentryCrashBinaryImage.uuid to a human readable 36 character long hex
  * representation.
  *
  * @param src The pointer to an UUID
