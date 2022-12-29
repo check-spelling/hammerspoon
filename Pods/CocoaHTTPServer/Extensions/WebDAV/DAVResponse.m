@@ -211,7 +211,7 @@ static xmlNodePtr _XMLChildWithName(xmlNodePtr child, const xmlChar* name) {
       } else {
         BOOL existing = [[NSFileManager defaultManager] fileExistsAtPath:destinationPath];
         if (existing && [[headers objectForKey:@"Overwrite"] isEqualToString:@"F"]) {
-          HTTPLogError(@"Pre-existing destination path \"%@\"", destinationPath);
+          HTTPLogError(@"Preexisting destination path \"%@\"", destinationPath);
           _status = 412;
         } else {
           if ([method isEqualToString:@"COPY"]) {
