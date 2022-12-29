@@ -39,7 +39,7 @@ typedef enum {
 
 typedef enum {
     SentryCrashCDeleteNever,
-    SentryCrashCDeleteOnSucess,
+    SentryCrashCDeleteOnSuccess,
     SentryCrashCDeleteAlways
 } SentryCrashCDeleteBehavior;
 
