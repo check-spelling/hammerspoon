@@ -37,7 +37,7 @@ typedef void(^MIKMIDIMappingGeneratorMappingCompletionBlock)(MIKMIDIMappingItem 
  *
  *  MIKMIDIMappingGenerator is able to interpret messages coming from a device to determine characteristics of the control
  *  sending the messages. This information is stored in the generated mapping for later use in correctly responding
- *  to incomding messages from each control. For example, some buttons on MIDI devices send a single message when 
+ *  to incoming messages from each control. For example, some buttons on MIDI devices send a single message when 
  *  pressed down, while other button send a message on press, and another on release. MIKMIDIMappingGenerator can
  *  determine the behavior for a button during mapping, so that an application knows to expect two messages from the
  *  mapped button during later use.
