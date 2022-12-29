@@ -611,7 +611,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param serialPort   The `ORSSerialPort` instance representing the port that received `responseData`.
  *  @param responseData The An `NSData` instance containing the received response data.
- *  @param request      The request to which the responseData is a respone.
+ *  @param request      The request to which the responseData is a response.
  */
 - (void)serialPort:(ORSSerialPort *)serialPort didReceiveResponse:(NSData *)responseData toRequest:(ORSSerialRequest *)request;
 
