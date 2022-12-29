@@ -23,7 +23,7 @@ https://github.com/AFNetworking/AFNetworking/blob/4eaec5b586ddd897ebeda896e332a6
      * know when it finishes is to check the task `state`. Using KVO is not working,
      * It randomly crashes an app. We hade two issues open because of this, #1328 and #1448. Instead
      * we are swizzling `setState:`. From iOS 10 to 13, NSURLSessionTask does not implement
-     * `setState:` and Apple uses a subclass returned by NSURLSession that implementes `setState:`.
+     * `setState:` and Apple uses a subclass returned by NSURLSession that implemented `setState:`.
      * We need to discover which class to swizzle.
      *
      * Apples intermediate classes for iOS does not call [super resume], so we can swizzle both
