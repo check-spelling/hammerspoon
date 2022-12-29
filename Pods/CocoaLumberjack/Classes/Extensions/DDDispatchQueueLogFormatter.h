@@ -160,7 +160,7 @@ typedef NS_ENUM(NSUInteger, DDDispatchQueueLogFormatterMode){
 - (void)configureDateFormatter:(NSDateFormatter *)dateFormatter;
 
 /**
- *  Formatter method to transfrom from date to string
+ *  Formatter method to transform from date to string
  */
 - (NSString *)stringFromDate:(NSDate *)date;
 
