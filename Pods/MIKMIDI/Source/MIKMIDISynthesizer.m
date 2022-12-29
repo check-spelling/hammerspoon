@@ -282,7 +282,7 @@
 	
 	AUNode outputNode;
 	if ((err = AUGraphAddNode(graph, &outputcd, &outputNode))) {
-		NSLog(@"Unable to add ouptput node to graph: %@", @(err));
+		NSLog(@"Unable to add output node to graph: %@", @(err));
 		*error = [NSError errorWithDomain:NSOSStatusErrorDomain code:err userInfo:nil];
 		return NO;
 	}
