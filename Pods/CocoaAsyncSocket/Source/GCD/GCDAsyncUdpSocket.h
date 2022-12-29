@@ -281,7 +281,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * The localAddress method returns a sockaddr structure wrapped in a NSData object.
  * The localHost method returns the human readable IP address as a string.
  * 
- * Note: Address info may not be available until after the socket has been binded, connected
+ * Note: Address info may not be available until after the socket has been bound, connected
  * or until after data has been sent.
 **/
 - (nullable NSData *)localAddress;
