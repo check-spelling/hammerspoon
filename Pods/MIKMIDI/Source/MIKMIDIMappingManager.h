@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  as user-customized mappings. It will automatically load both bundled and
  *  user mappings from disk. It will also save user mappings to an appropriate
  *  location on disk, providing an easy to way to support the ability to import user
- *  mappings to an applicaation.
+ *  mappings to an application.
  *
  *  MIKMIDIMappingManager is a singleton.
  */
