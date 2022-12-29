@@ -71,5 +71,5 @@
  *   It's NOT OK if we return a greater number of bytes to the connection.
  *   Doing so would disrupt proper support for range requests.
  *   If, however, the response is chunked then we don't need to worry about this.
- *   Chunked responses inheritly don't support range requests.
+ *   Chunked responses inherently don't support range requests.
 **/
