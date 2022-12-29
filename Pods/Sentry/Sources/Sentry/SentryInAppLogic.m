@@ -36,8 +36,8 @@ SentryInAppLogic ()
             return YES;
     }
 
-    for (NSString *inAppExlude in self.inAppExcludes) {
-        if ([imageName.lastPathComponent.lowercaseString hasPrefix:inAppExlude.lowercaseString])
+    for (NSString *inAppExclude in self.inAppExcludes) {
+        if ([imageName.lastPathComponent.lowercaseString hasPrefix:inAppExclude.lowercaseString])
             return NO;
     }
 
