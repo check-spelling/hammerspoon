@@ -686,7 +686,7 @@ typedef NS_ERROR_ENUM(GCDAsyncSocketErrorDomain, GCDAsyncSocketError) {
  * - GCDAsyncSocketManuallyEvaluateTrust
  *     The value must be of type NSNumber, encapsulating a BOOL value.
  *     If you set this to YES, then the underlying SecureTransport system will not evaluate the SecTrustRef of the peer.
- *     Instead it will pause at the moment evaulation would typically occur,
+ *     Instead it will pause at the moment evaluation would typically occur,
  *     and allow us to handle the security evaluation however we see fit.
  *     So GCDAsyncSocket will invoke the delegate method socket:shouldTrustPeer: passing the SecTrustRef.
  *
