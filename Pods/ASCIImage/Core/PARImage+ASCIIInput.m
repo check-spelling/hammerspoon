@@ -140,7 +140,7 @@ NSString * const ASCIIContextShouldAntialias    = @"ASCIIContextShouldAntialias"
     NSUInteger lastColumn = pixelColumns.lastIndex;
     NSUInteger countCols = 1 + (lastColumn - firstColumn) / pixelGap;
     NSUInteger countRows = lenientRep.count;
-    NSAssert(((lastColumn - firstColumn) % pixelGap) == 0, @"the first and last pixel column should be spearated by an integer multiple of `pixelGap`");
+    NSAssert(((lastColumn - firstColumn) % pixelGap) == 0, @"the first and last pixel column should be separated by an integer multiple of `pixelGap`");
     if (concatenatedStrings.length == countCols * countRows)
         return lenientRep;
     NSMutableString *strictString = [NSMutableString stringWithCapacity:countCols * countRows];
