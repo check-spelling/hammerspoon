@@ -51,7 +51,7 @@
  * 
  * readOffset
  *   Represents the offset of the file descriptor.
- *   In other words, the file position indidcator for our read stream.
+ *   In other words, the file position indicator for our read stream.
  *   It might be easy to think of it as the total number of bytes that have been read from the file.
  *   However, this isn't entirely accurate, as the setOffset: method may have caused us to
  *   jump ahead in the file (lseek).
