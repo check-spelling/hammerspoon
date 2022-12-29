@@ -729,7 +729,7 @@ static NSMutableArray *recentNonces;
 
 /**
  * Attempts to parse the given range header into a series of sequential non-overlapping ranges.
- * If successfull, the variables 'ranges' and 'rangeIndex' will be updated, and YES will be returned.
+ * If successful, the variables 'ranges' and 'rangeIndex' will be updated, and YES will be returned.
  * Otherwise, NO is returned, and the range request should be ignored.
  **/
 - (BOOL)parseRangeRequest:(NSString *)rangeHeader withContentLength:(UInt64)contentLength
