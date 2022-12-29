@@ -287,10 +287,10 @@
 		return NO;
 	}
 	
-	AudioComponentDescription instrumentcd = self.componentDescription;
+	AudioComponentDescription instrument = self.componentDescription;
 	
 	AUNode instrumentNode;
-	if ((err = AUGraphAddNode(graph, &instrumentcd, &instrumentNode))) {
+	if ((err = AUGraphAddNode(graph, &instrument, &instrumentNode))) {
 		NSLog(@"Unable to add instrument node to AU graph: %@", @(err));
 		*error = [NSError errorWithDomain:NSOSStatusErrorDomain code:err userInfo:nil];
 		return NO;
@@ -323,7 +323,7 @@
 	
 #if !TARGET_OS_IPHONE
 	// Turn down reverb which is way too high by default
-	if (instrumentcd.componentSubType == kAudioUnitSubType_DLSSynth) {
+	if (instrument.componentSubType == kAudioUnitSubType_DLSSynth) {
 		if ((err = AudioUnitSetParameter(instrumentUnit, kMusicDeviceParam_ReverbVolume, kAudioUnitScope_Global, 0, -120, 0))) {
 			NSLog(@"Unable to set reverb level to -120: %@", @(err));
 		}
@@ -366,15 +366,15 @@
 
 + (AudioComponentDescription)appleSynthComponentDescription
 {
-	AudioComponentDescription instrumentcd = (AudioComponentDescription){0};
-	instrumentcd.componentManufacturer = kAudioUnitManufacturer_Apple;
-	instrumentcd.componentType = kAudioUnitType_MusicDevice;
+	AudioComponentDescription instrument = (AudioComponentDescription){0};
+	instrument.componentManufacturer = kAudioUnitManufacturer_Apple;
+	instrument.componentType = kAudioUnitType_MusicDevice;
 #if TARGET_OS_IPHONE
-	instrumentcd.componentSubType = kAudioUnitSubType_Sampler;
+	instrument.componentSubType = kAudioUnitSubType_Sampler;
 #else
-	instrumentcd.componentSubType = kAudioUnitSubType_DLSSynth;
+	instrument.componentSubType = kAudioUnitSubType_DLSSynth;
 #endif
-	return instrumentcd;
+	return instrument;
 }
 
 #pragma mark - MIKMIDICommandScheduler

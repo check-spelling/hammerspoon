@@ -19,11 +19,11 @@
 #if TARGET_OS_IPHONE && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_8_0
 + (AudioComponentDescription)appleSynthComponentDescription
 {
-	AudioComponentDescription instrumentcd = (AudioComponentDescription){0};
-	instrumentcd.componentManufacturer = kAudioUnitManufacturer_Apple;
-	instrumentcd.componentType = kAudioUnitType_MusicDevice;
-	instrumentcd.componentSubType = kAudioUnitSubType_Sampler;
-	return instrumentcd;
+	AudioComponentDescription instrument = (AudioComponentDescription){0};
+	instrument.componentManufacturer = kAudioUnitManufacturer_Apple;
+	instrument.componentType = kAudioUnitType_MusicDevice;
+	instrument.componentSubType = kAudioUnitSubType_Sampler;
+	return instrument;
 }
 #endif
 
