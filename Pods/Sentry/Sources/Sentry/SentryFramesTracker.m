@@ -59,7 +59,7 @@ SentryFramesTracker ()
             maximumFramesPerSecond = (double)UIScreen.mainScreen.maximumFramesPerSecond;
         }
 
-        // Most frames take just a few microseconds longer than the optimal caculated duration.
+        // Most frames take just a few microseconds longer than the optimal calculated duration.
         // Therefore we substract one, because otherwise almost all frames would be slow.
         _slowFrameThreshold = 1 / (maximumFramesPerSecond - 1);
 
