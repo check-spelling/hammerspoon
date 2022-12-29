@@ -495,7 +495,7 @@ const MusicTimeStamp MIKMIDISequencerEndOfSequenceLoopEndTimeStamp = -1;
 
 - (void)updateClockWithMusicTimeStamp:(MusicTimeStamp)musicTimeStamp tempo:(Float64)tempo atMIDITimeStamp:(MIDITimeStamp)midiTimeStamp
 {
-    // Override tempo if neccessary
+    // Override tempo if necessary
     Float64 tempoOverride = self.tempo;
     if (tempoOverride) tempo = tempoOverride;
     [self.clock syncMusicTimeStamp:musicTimeStamp withMIDITimeStamp:midiTimeStamp tempo:tempo];
