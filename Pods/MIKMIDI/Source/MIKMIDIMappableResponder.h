@@ -86,7 +86,7 @@ typedef NS_OPTIONS(NSUInteger, MIKMIDIResponderType){
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  This protocol defines methods that that must be implemented by MIDI responder objects to be mapped
+ *  This protocol defines methods that must be implemented by MIDI responder objects to be mapped
  *  using MIKMIDIMappingGenerator, and to whom MIDI messages will selectively be routed using a MIDI mapping
  *  during normal operation.
  */
