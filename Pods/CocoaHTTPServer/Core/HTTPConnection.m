@@ -951,7 +951,7 @@ static NSMutableArray *recentNonces;
 				
 				// Note: There is a timing issue here that should be pointed out.
 				// 
-				// A bug that existed in previous versions happend like so:
+				// A bug that existed in previous versions happened like so:
 				// - We invoked [self die]
 				// - This caused us to get released, and our dealloc method to start executing
 				// - Meanwhile, AsyncSocket noticed a disconnect, and began to dispatch a socketDidDisconnect at us
