@@ -86,8 +86,8 @@ NS_ASSUME_NONNULL_BEGIN
         if (self.username != otherUsername && ![self.username isEqualToString:otherUsername])
             return NO;
 
-        NSString *otherIpAdress = user.ipAddress;
-        if (self.ipAddress != otherIpAdress && ![self.ipAddress isEqualToString:otherIpAdress])
+        NSString *otherIpAddress = user.ipAddress;
+        if (self.ipAddress != otherIpAddress && ![self.ipAddress isEqualToString:otherIpAddress])
             return NO;
 
         NSDictionary<NSString *, id> *otherUserData = user.data;
