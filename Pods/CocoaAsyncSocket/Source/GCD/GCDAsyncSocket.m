@@ -5164,7 +5164,7 @@ enum GCDAsyncSocketConfig
 				// We know:
 				// - how many bytes are available on the socket
 				// - how many encrypted bytes are sitting in the sslPreBuffer
-				// - how many decypted bytes are sitting in the sslContext
+				// - how many decrypted bytes are sitting in the sslContext
 				//
 				// But we do NOT know:
 				// - how many encypted bytes are sitting in the sslContext
