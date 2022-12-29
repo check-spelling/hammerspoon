@@ -810,7 +810,7 @@ typedef NS_ERROR_ENUM(GCDAsyncSocketErrorDomain, GCDAsyncSocketError) {
 
 /**
  * Traditionally sockets are not closed until the conversation is over.
- * However, it is technically possible for the remote enpoint to close its write stream.
+ * However, it is technically possible for the remote endpoint to close its write stream.
  * Our socket would then be notified that there is no more data to be read,
  * but our socket would still be writeable and the remote endpoint could continue to receive our data.
  * 
