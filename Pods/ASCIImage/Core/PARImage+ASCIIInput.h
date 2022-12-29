@@ -36,7 +36,7 @@ extern NSString * const ASCIIContextShouldAntialias;
 
 /// @name Creating Images from ASCII Input
 
-/// This simple version only needs a color and a flag for anti-aliasing. The specified color is used to draw lines at 1 pixel width, draw pixels as 1-pixel sqaure, and to fill polygons and ellipses.
+/// This simple version only needs a color and a flag for anti-aliasing. The specified color is used to draw lines at 1 pixel width, draw pixels as 1-pixel square, and to fill polygons and ellipses.
 + (PARImage *)imageWithASCIIRepresentation:(NSArray *)rep color:(PARColor *)color shouldAntialias:(BOOL)shouldAntialias;
 
 /// This method offers more advanced options that can be set on each "shape", using the `contextHandler` block. The mutable dictionary passed by the block can be modified using the keys listed in the constant above. The dictionary initially contains the `ASCIIContextShapeIndex` key to indicate which shape will be drawn. You cannot manipulate the current graphic context directly within that block.
