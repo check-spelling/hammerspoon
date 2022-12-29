@@ -4,6 +4,9 @@ on:
   pull_request_target:
     types: [opened, reopened, labeled, unlabeled, synchronize]
 
+permissions:
+  pull-requests: write
+
 jobs:
   check_labels:
     name: Verify PR has a valid label
