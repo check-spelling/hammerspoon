@@ -149,7 +149,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Returns an `ORSSerialPort` instance for the serial port represented by `device`.
  *
  *  Generally, `+serialPortWithPath:` is the method to use to get port instances
- *  programatically. This method may be useful if you're doing your own
+ *  programmatically. This method may be useful if you're doing your own
  *  device discovery with IOKit functions, or otherwise have an IOKit port object
  *  you want to "turn into" an ORSSerialPort. Most people will not use this method
  *  directly.
@@ -182,7 +182,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Returns an `ORSSerialPort` instance for the serial port represented by `device`.
  *
  *  Generally, `-initWithPath:` is the method to use to get port instances
- *  programatically. This method may be useful if you're doing your own
+ *  programmatically. This method may be useful if you're doing your own
  *  device discovery with IOKit functions, or otherwise have an IOKit port object
  *  you want to "turn into" an ORSSerialPort. Most people will not use this method
  *  directly.
