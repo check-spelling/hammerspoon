@@ -4916,7 +4916,7 @@ enum GCDAsyncSocketConfig
 			// 
 			// The first buffer is one we create.
 			// SecureTransport often requests small amounts of data.
-			// This has to do with the encypted packets that are coming across the TCP stream.
+			// This has to do with the encrypted packets that are coming across the TCP stream.
 			// But it's non-optimal to do a bunch of small reads from the BSD socket.
 			// So our SSLReadFunction reads all available data from the socket (optimizing the sys call)
 			// and may store excess in the sslPreBuffer.
@@ -5167,7 +5167,7 @@ enum GCDAsyncSocketConfig
 				// - how many decrypted bytes are sitting in the sslContext
 				//
 				// But we do NOT know:
-				// - how many encypted bytes are sitting in the sslContext
+				// - how many encrypted bytes are sitting in the sslContext
 				//
 				// So we play the regular game of using an upper bound instead.
 				
