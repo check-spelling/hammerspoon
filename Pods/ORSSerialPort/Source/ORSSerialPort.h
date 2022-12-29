@@ -630,7 +630,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Called when an error occurs during an operation involving a serial port.
  *
  *	This method is always used to report errors. No `ORSSerialPort` methods
- *  take a passed in `NSError **` reference because errors may occur asynchonously,
+ *  take a passed in `NSError **` reference because errors may occur asynchronously,
  *  after a method has returned.
  *
  *	Currently, errors reported using this method are always in the `NSPOSIXErrorDomain`,
