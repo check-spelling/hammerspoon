@@ -27,7 +27,7 @@ While it was initially developed with bitmaps in mind, and while the ASCII repre
 
 #### What's next?
 
-The idea and initial implementation was mostly a one-day hack. But I did refine a few details over the year that followed, before finally making it public in March 2015. As a result of these tweaks, it is really filling out all my needs for what I use it for. I may add a few more options to the drawing "context" in the block-based API, in particular to exploit the vector aspect more, with scaling and smooting options. I am also curious to see what others do with it. But I think I want to really keep it simple and restricted to the original spirit: code and image in one place, with instant gratification. For more complex things, designers, real image editors and real formats should be used.
+The idea and initial implementation was mostly a one-day hack. But I did refine a few details over the year that followed, before finally making it public in March 2015. As a result of these tweaks, it is really filling out all my needs for what I use it for. I may add a few more options to the drawing "context" in the block-based API, in particular to exploit the vector aspect more, with scaling and smoothing options. I am also curious to see what others do with it. But I think I want to really keep it simple and restricted to the original spirit: code and image in one place, with instant gratification. For more complex things, designers, real image editors and real formats should be used.
 
 #### What apps are using ASCIImage?
 
