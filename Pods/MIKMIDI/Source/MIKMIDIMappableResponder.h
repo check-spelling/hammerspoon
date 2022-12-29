@@ -114,7 +114,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param commandID A command identifier string.
  *
- *  @return A MIKMIDIResponderType bitfield specifing one or more responder type(s).
+ *  @return A MIKMIDIResponderType bitfield specifying one or more responder type(s).
  *
  *  @see MIKMIDIResponderType
  */
