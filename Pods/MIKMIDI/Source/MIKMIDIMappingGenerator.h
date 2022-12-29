@@ -210,7 +210,7 @@ typedef NS_ENUM(NSUInteger, MIKMIDIMappingGeneratorRemapBehavior) {
  *
  *  @param generator    The mapping generator performing the mapping.
  *  @param mappingItems The set of existing MIKMIDIMappingItems associated with responder.
- *  @param responder    The reponsder for which a mapping is currently being generated.
+ *  @param responder    The responder for which a mapping is currently being generated.
  *
  *  @return YES to remove the existing mapping items. NO to keep the existing mapping items in addition to the new mapping item being generated.
  */
