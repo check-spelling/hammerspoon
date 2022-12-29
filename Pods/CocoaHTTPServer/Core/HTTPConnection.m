@@ -1036,13 +1036,13 @@ static NSMutableArray *recentNonces;
 	// Status Code 206 - Partial Content
 	HTTPMessage *response = [[HTTPMessage alloc] initResponseWithStatusCode:206 description:nil version:HTTPVersion1_1];
 	
-	// We have to send each range using multipart/byteranges
-	// So each byterange has to be prefix'd and suffix'd with the boundary
+	// We have to send each range using multipart/byte ranges
+	// So each byte range has to be prefix'd and suffix'd with the boundary
 	// Example:
 	// 
 	// HTTP/1.1 206 Partial Content
 	// Content-Length: 220
-	// Content-Type: multipart/byteranges; boundary=4554d24e986f76dd6
+	// Content-Type: multipart/byte ranges; boundary=4554d24e986f76dd6
 	// 
 	// 
 	// --4554d24e986f76dd6
@@ -1091,7 +1091,7 @@ static NSMutableArray *recentNonces;
 	NSString *contentLengthStr = [NSString stringWithFormat:@"%qu", actualContentLength];
 	[response setHeaderField:@"Content-Length" value:contentLengthStr];
 	
-	NSString *contentTypeStr = [NSString stringWithFormat:@"multipart/byteranges; boundary=%@", ranges_boundary];
+	NSString *contentTypeStr = [NSString stringWithFormat:@"multipart/byte ranges; boundary=%@", ranges_boundary];
 	[response setHeaderField:@"Content-Type" value:contentTypeStr];
 	
 	return response;
@@ -1281,7 +1281,7 @@ static NSMutableArray *recentNonces;
 			else
 			{
 				// Client is requesting multiple ranges
-				// We have to send each range using multipart/byteranges
+				// We have to send each range using multipart/byte ranges
 				
 				// Write range header
 				NSData *rangeHeaderData = [ranges_headers objectAtIndex:0];
