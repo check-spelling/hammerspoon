@@ -138,7 +138,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param devicePath The full path (e.g. /dev/cu.usbserial) to the device.
  *
- *  @return An initalized `ORSSerialPort` instance, or nil if there was an error.
+ *  @return An initialized `ORSSerialPort` instance, or nil if there was an error.
  * 
  *  @see -[ORSSerialPortManager availablePorts]
  *  @see -initWithPath:
@@ -156,7 +156,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param device An IOKit port object representing the serial port device.
  *
- *  @return An initalized `ORSSerialPort` instance, or nil if there was an error.
+ *  @return An initialized `ORSSerialPort` instance, or nil if there was an error.
  *
  *  @see -[ORSSerialPortManager availablePorts]
  *  @see +serialPortWithPath:
@@ -171,7 +171,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param devicePath The full path (e.g. /dev/cu.usbserial) to the device.
  *
- *  @return An initalized `ORSSerialPort` instance, or nil if there was an error.
+ *  @return An initialized `ORSSerialPort` instance, or nil if there was an error.
  *
  *  @see -[ORSSerialPortManager availablePorts]
  *  @see +serialPortWithPath:
@@ -189,7 +189,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param device An IOKit port object representing the serial port device.
  *
- *  @return An initalized `ORSSerialPort` instance, or nil if there was an error.
+ *  @return An initialized `ORSSerialPort` instance, or nil if there was an error.
  *
  *  @see -[ORSSerialPortManager availablePorts]
  *  @see -initWithPath:
