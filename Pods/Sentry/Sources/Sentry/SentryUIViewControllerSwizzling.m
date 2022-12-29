@@ -90,7 +90,7 @@ SentryUIViewControllerSwizzling ()
 - (void)swizzleRootViewController
 {
     if (![UIApplication respondsToSelector:@selector(sharedApplication)]) {
-        NSString *message = @"UIViewControllerSwizziling: UIApplication doesn't respont to "
+        NSString *message = @"UIViewControllerSwizziling: UIApplication doesn't respond to "
                             @"sharedApplication. Skipping swizzleRootViewController.";
         [SentryLog logWithMessage:message andLevel:kSentryLevelDebug];
         return;
