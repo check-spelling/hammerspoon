@@ -130,13 +130,13 @@ monitorCachedData(__unused void *const userData)
         if (g_semaphoreCount <= 0) {
             updateThreadList();
         }
-        unsigned pollintInterval = (unsigned)g_pollingIntervalInSeconds;
+        unsigned pollingInterval = (unsigned)g_pollingIntervalInSeconds;
         if (quickPollCount > 0) {
             // Lots can happen in the first few seconds of operation.
             quickPollCount--;
-            pollintInterval = 1;
+            pollingInterval = 1;
         }
-        sleep(pollintInterval);
+        sleep(pollingInterval);
     }
     return NULL;
 }
