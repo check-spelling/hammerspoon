@@ -47,7 +47,7 @@
 	if (![[self class] isMutable]) { return MIKMIDI_RAISE_MUTATION_ATTEMPT_EXCEPTION; }
 	
 	if (!noteOn) {
-		[NSException raise:NSInvalidArgumentException format:@"Instances of MIKMIDINoteOnCommmand must always have a noteOn property value of YES"];
+		[NSException raise:NSInvalidArgumentException format:@"Instances of MIKMIDINoteOnCommand must always have a noteOn property value of YES"];
 	}
 }
 
