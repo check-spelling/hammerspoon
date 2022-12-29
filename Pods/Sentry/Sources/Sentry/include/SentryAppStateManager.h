@@ -9,7 +9,7 @@ NS_ASSUME_NONNULL_BEGIN
 SENTRY_NO_INIT
 
 - (instancetype)initWithOptions:(SentryOptions *)options
-                   crashAdapter:(SentryCrashAdapter *)crashAdatper
+                   crashAdapter:(SentryCrashAdapter *)crashAdapter
                     fileManager:(SentryFileManager *)fileManager
             currentDateProvider:(id<SentryCurrentDateProvider>)currentDateProvider
                          sysctl:(SentrySysctl *)sysctl;
@@ -19,7 +19,7 @@ SENTRY_NO_INIT
 /**
  * Builds the current app state.
  *
- * @discussion The systemBootTimestamp is calculated by taking the current time and substracting
+ * @discussion The systemBootTimestamp is calculated by taking the current time and subtracting
  * NSProcesInfo.systemUptime.  NSProcesInfo.systemUptime returns the amount of time the system has
  * been awake since the last time it was restarted. This means This is a good enough approximation
  * about the timestamp the system booted.

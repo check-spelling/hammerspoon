@@ -60,7 +60,7 @@ extern NSString * const MIKMIDIEndpointKey;
  *  are KVO compliant, meaning they can be observed using KVO for changes, and (on OS X) can be bound to UI
  *  elements using Cocoa bindings.
  *
- *  MIKMIDIDeviceManager is also used to connect to and disonnect from MIDI endpoints, as well as to send and receive MIDI
+ *  MIKMIDIDeviceManager is also used to connect to and disconnect from MIDI endpoints, as well as to send and receive MIDI
  *  messages. To connect to a MIDI source endpoint, call -connectInput:error:eventHandler:. To disconnect, call -disconnectInput:.
  *  To send MIDI messages/commands to an output endpoint, call -sendCommands:toEndpoint:error:.
  */
@@ -77,7 +77,7 @@ extern NSString * const MIKMIDIEndpointKey;
 
 /**
  *  Used to connect to a MIDI device. Returns a token that must be kept and passed into the
- *  -disconnectConnectionforToken: method.
+ *  -disconnectConnectionForToken: method.
  *
  *  When a connection is made using this method, all of the devices valid source endpoints are connected to. To
  *  connect to specific endpoints only, use -connectInput:error:eventHandler:
@@ -93,7 +93,7 @@ extern NSString * const MIKMIDIEndpointKey;
 
 /**
  *  Used to connect to a single MIDI input/source endpoint. Returns a token that must be kept and passed into the
- *  -disconnectConnectionforToken: method.
+ *  -disconnectConnectionForToken: method.
  *
  *  @param endpoint		An MIKMIDISourceEndpoint instance that should be connected.
  *  @param error		If an error occurs, upon returns contains an NSError object that describes the problem.
@@ -199,7 +199,7 @@ extern NSString * const MIKMIDIEndpointKey;
 @interface MIKMIDIDeviceManager (Deprecated)
 
 /**
- *  @deprecated Use disconnectConnectionforToken: instead. This method now simply calls through to that one.
+ *  @deprecated Use disconnectConnectionForToken: instead. This method now simply calls through to that one.
  *
  *  Disconnects a previously connected MIDI input/source endpoint. The connectionToken argument
  *  must be a token previously returned by -connectInput:error:eventHandler:. Only the

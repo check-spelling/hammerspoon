@@ -26,7 +26,7 @@
 
 @property (nonatomic, strong) NSSet *existingMappingItems;
 
-@property (nonatomic) NSTimeInterval timeoutInteveral;
+@property (nonatomic) NSTimeInterval timeoutInterval;
 @property (nonatomic, strong) NSTimer *messagesTimeoutTimer;
 @property (nonatomic, strong) NSMutableArray *receivedMessages;
 
@@ -123,7 +123,7 @@
     self.controlBeingLearned = control;
     self.commandIdentifierBeingLearned = commandID;
     self.responderTypeOfControlBeingLearned = controlResponderType;
-    self.timeoutInteveral = timeout ? timeout : 0.6;
+    self.timeoutInterval = timeout ? timeout : 0.6;
     self.messagesTimeoutTimer = nil;
 
     if (self.isDiagnosticLoggingEnabled) {
@@ -189,7 +189,7 @@
     if (![self.controlBeingLearned respondsToMIDICommand:command]) return;
 
     [self.receivedMessages addObject:command];
-    self.messagesTimeoutTimer = [NSTimer scheduledTimerWithTimeInterval:self.timeoutInteveral
+    self.messagesTimeoutTimer = [NSTimer scheduledTimerWithTimeInterval:self.timeoutInterval
                                                                  target:self
                                                                selector:@selector(timeoutTimerFired:)
                                                                userInfo:nil
@@ -211,7 +211,7 @@
 
     // Tap type button
     if ([messages count] == 1) {
-        if ([[NSDate date] timeIntervalSinceDate:firstMessage.timestamp] < self.timeoutInteveral) return NO; // Need to keep waiting for another message
+        if ([[NSDate date] timeIntervalSinceDate:firstMessage.timestamp] < self.timeoutInterval) return NO; // Need to keep waiting for another message
 
         result.interactionType = MIKMIDIResponderTypePressButton;
     }

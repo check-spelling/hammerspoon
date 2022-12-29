@@ -75,14 +75,14 @@ typedef struct {
 /** Notify that a fatal exception has been captured.
  *  This allows the system to take appropriate steps in preparation.
  *
- * @oaram isAsyncSafeEnvironment If true, only async-safe functions are allowed
+ * @param isAsyncSafeEnvironment If true, only async-safe functions are allowed
  * from now on.
  */
 bool sentrycrashcm_notifyFatalExceptionCaptured(bool isAsyncSafeEnvironment);
 
 /** Start general exception processing.
  *
- * @oaram context Contextual information about the exception.
+ * @param context Contextual information about the exception.
  */
 void sentrycrashcm_handleException(struct SentryCrash_MonitorContext *context);
 

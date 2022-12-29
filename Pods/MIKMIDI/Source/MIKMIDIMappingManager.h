@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  as user-customized mappings. It will automatically load both bundled and
  *  user mappings from disk. It will also save user mappings to an appropriate
  *  location on disk, providing an easy to way to support the ability to import user
- *  mappings to an applicaation.
+ *  mappings to an application.
  *
  *  MIKMIDIMappingManager is a singleton.
  */
@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  a unique name is used for the newly imported mapping, preserving both mapping files.
  *
  *  @param URL             The fileURL for the mapping file to be imported. Should not be nil.
- *  @param shouldOverwrite YES if an existing mapping with the same file name should be overwitten, NO to use a unique file name for the newly imported mapping.
+ *  @param shouldOverwrite YES if an existing mapping with the same file name should be overwritten, NO to use a unique file name for the newly imported mapping.
  *  @param error           Pointer to an NSError used to return information about an error, if any.
  *
  *  @return An MIKMIDIMapping instance for the imported file, or nil if there was an error.

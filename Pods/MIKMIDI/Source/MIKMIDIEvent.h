@@ -126,7 +126,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  For event types for which there is a specific MIKMIDIEvent subclass,
  *  an instance of the appropriate subclass will be returned.
  *
- *  The NSData argument is used in conjunction with the eventType to propertly discriminate
+ *  The NSData argument is used in conjunction with the eventType to properly discriminate
  *  between different kMusicEventType_Meta subtypes.
  *
  *  @param timeStamp A MusicTimeStamp value indicating the timestamp for the event.

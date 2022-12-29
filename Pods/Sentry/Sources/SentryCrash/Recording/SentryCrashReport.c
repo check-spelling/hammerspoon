@@ -1490,7 +1490,7 @@ writeRecrash(
 
 /** Prepare a report writer for use.
  *
- * @oaram writer The writer to prepare.
+ * @param writer The writer to prepare.
  *
  * @param context JSON writer contextual information.
  */

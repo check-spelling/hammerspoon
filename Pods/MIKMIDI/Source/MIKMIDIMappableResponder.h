@@ -86,7 +86,7 @@ typedef NS_OPTIONS(NSUInteger, MIKMIDIResponderType){
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  This protocol defines methods that that must be implemented by MIDI responder objects to be mapped
+ *  This protocol defines methods that must be implemented by MIDI responder objects to be mapped
  *  using MIKMIDIMappingGenerator, and to whom MIDI messages will selectively be routed using a MIDI mapping
  *  during normal operation.
  */
@@ -114,7 +114,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param commandID A command identifier string.
  *
- *  @return A MIKMIDIResponderType bitfield specifing one or more responder type(s).
+ *  @return A MIKMIDIResponderType bitfield specifying one or more responder type(s).
  *
  *  @see MIKMIDIResponderType
  */
@@ -136,7 +136,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  physical LED status. This must be implemented in application code. For most devices,
  *  this can be accomplished by sending a MIDI message _to_ the device. The MIDI message
  *  should identical to the message that the relevant control sends when pressed, with
- *  a non-zero value to illumniate the control, or zero to turn illumination off.
+ *  a non-zero value to illuminate the control, or zero to turn illumination off.
  *
  *  @param commandID The commandID for which the associated illumination state is desired.
  *

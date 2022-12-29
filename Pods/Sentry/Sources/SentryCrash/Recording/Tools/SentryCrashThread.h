@@ -41,7 +41,7 @@ typedef uintptr_t SentryCrashThread;
  *
  * @param thread The thread whose name to get.
  *
- * @oaram buffer Buffer to hold the name.
+ * @param buffer Buffer to hold the name.
  *
  * @param bufLength The length of the buffer.
  *

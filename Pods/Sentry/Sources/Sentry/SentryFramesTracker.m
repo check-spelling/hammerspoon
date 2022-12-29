@@ -10,7 +10,7 @@ static CFTimeInterval const SentryFrozenFrameThreshold = 0.7;
 static CFTimeInterval const SentryPreviousFrameInitalValue = -1;
 
 /**
- * Relaxed memoring ordering is typical for incrementing counters. This operation only requires
+ * Relaxed memory ordering is typical for incrementing counters. This operation only requires
  * atomicity but not ordering or synchronization.
  */
 static memory_order const SentryFramesMemoryOrder = memory_order_relaxed;
@@ -59,7 +59,7 @@ SentryFramesTracker ()
             maximumFramesPerSecond = (double)UIScreen.mainScreen.maximumFramesPerSecond;
         }
 
-        // Most frames take just a few microseconds longer than the optimal caculated duration.
+        // Most frames take just a few microseconds longer than the optimal calculated duration.
         // Therefore we substract one, because otherwise almost all frames would be slow.
         _slowFrameThreshold = 1 / (maximumFramesPerSecond - 1);
 

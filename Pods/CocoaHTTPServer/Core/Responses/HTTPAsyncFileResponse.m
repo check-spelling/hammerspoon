@@ -16,7 +16,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN; // | HTTP_LOG_FLAG_TRACE;
 #define NULL_FD  -1
 
 /**
- * Architecure overview:
+ * Architecture overview:
  * 
  * HTTPConnection will invoke our readDataOfLength: method to fetch data.
  * We will return nil, and then proceed to read the data via our readSource on our readQueue.

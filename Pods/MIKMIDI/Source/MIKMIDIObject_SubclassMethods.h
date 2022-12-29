@@ -47,7 +47,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  MIKMIDIObject's base implementation of this method checks the object's
  *  type and returns YES if it is contained in the array returned by +representedMIDIObjectTypes.
  *  Therefore, unless special behavior is required (e.g. supporting virtual objects
- *  where the objectRef is NULL), this does not typically need to be overriden.
+ *  where the objectRef is NULL), this does not typically need to be overridden.
  *
  *  @param objectRef A CoreMIDI MIDIObjectRef.
  *

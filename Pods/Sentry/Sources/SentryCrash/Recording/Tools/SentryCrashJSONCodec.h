@@ -333,7 +333,7 @@ int sentrycrashjson_beginElement(
     SentryCrashJSONEncodeContext *const context, const char *const name);
 
 /** Add JSON data manually.
- * This function just passes your data directly through, even if it's malforned.
+ * This function just passes your data directly through, even if it's malformed.
  *
  * @param context The encoding context.
  *
@@ -499,7 +499,7 @@ typedef struct SentryCrashJSONDecodeCallbacks {
  *
  * @param userData Any data you would like passed to the callbacks.
  *
- * @oaram errorOffset If not null, will contain the offset into the data
+ * @param errorOffset If not null, will contain the offset into the data
  *                    where the error (if any) occurred.
  *
  * @return SentryCrashJSON_OK if succesful. An error code otherwise.

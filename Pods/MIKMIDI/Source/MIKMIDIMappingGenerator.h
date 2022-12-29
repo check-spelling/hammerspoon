@@ -25,7 +25,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param mappingItem The mapping item generated, or nil if mapping failed.
  *  @param messages    The messages used to generate the mapping. May not include all messages received during mapping.
- *  @param error       If mapping failed, an NSError explaing the failure, nil if mapping succeeded.
+ *  @param error       If mapping failed, an NSError explaining the failure, nil if mapping succeeded.
  */
 typedef void(^MIKMIDIMappingGeneratorMappingCompletionBlock)(MIKMIDIMappingItem *mappingItem, MIKArrayOf(MIKMIDICommand *) *messages, NSError *_Nullable error);
 
@@ -37,7 +37,7 @@ typedef void(^MIKMIDIMappingGeneratorMappingCompletionBlock)(MIKMIDIMappingItem 
  *
  *  MIKMIDIMappingGenerator is able to interpret messages coming from a device to determine characteristics of the control
  *  sending the messages. This information is stored in the generated mapping for later use in correctly responding
- *  to incomding messages from each control. For example, some buttons on MIDI devices send a single message when 
+ *  to incoming messages from each control. For example, some buttons on MIDI devices send a single message when 
  *  pressed down, while other button send a message on press, and another on release. MIKMIDIMappingGenerator can
  *  determine the behavior for a button during mapping, so that an application knows to expect two messages from the
  *  mapped button during later use.
@@ -210,7 +210,7 @@ typedef NS_ENUM(NSUInteger, MIKMIDIMappingGeneratorRemapBehavior) {
  *
  *  @param generator    The mapping generator performing the mapping.
  *  @param mappingItems The set of existing MIKMIDIMappingItems associated with responder.
- *  @param responder    The reponsder for which a mapping is currently being generated.
+ *  @param responder    The responder for which a mapping is currently being generated.
  *
  *  @return YES to remove the existing mapping items. NO to keep the existing mapping items in addition to the new mapping item being generated.
  */

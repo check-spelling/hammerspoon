@@ -47,7 +47,7 @@ __attribute((deprecated("use MIKMIDISequencer instead")))
 - (void)resumePlayback;
 
 /**
- *  Stops playback of the music seuqenece.
+ *  Stops playback of the music sequence.
  */
 - (void)stopPlayback;
 

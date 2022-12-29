@@ -39,7 +39,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  by -availableDevices, and instead will be represented by virtual endpoints found in the arrays returned
  *  by -[MIKMIDIDeviceManager virtualSources] and -[MIKMIDIDeviceManager virtualDestinations]. MIKMIDIDevice
  *  can be used to "wrap" virtual sources so that it can be used with devices that present solely using virtual
- *  endpoings. See +deviceWithVirtualEndpoints: for more.
+ *  endpoints. See +deviceWithVirtualEndpoints: for more.
  *
  *  Connecting to a Device
  *  ----------------------

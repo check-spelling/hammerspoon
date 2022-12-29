@@ -1274,7 +1274,7 @@ enum GCDAsyncUdpSocketConfig
 
 /**
  * This method picks an address from the given list of addresses.
- * The address picked depends upon which protocols are disabled, deactived, & preferred.
+ * The address picked depends upon which protocols are disabled, deactivated, & preferred.
  * 
  * Returns the address family (AF_INET or AF_INET6) of the picked address,
  * or AF_UNSPEC and the corresponding error is there's a problem.
@@ -1420,9 +1420,9 @@ enum GCDAsyncUdpSocketConfig
 
 /**
  * Finds the address(es) of an interface description.
- * An inteface description may be an interface name (en0, en1, lo0) or corresponding IP (192.168.4.34).
+ * An interface description may be an interface name (en0, en1, lo0) or corresponding IP (192.168.4.34).
 **/
-- (void)convertIntefaceDescription:(NSString *)interfaceDescription
+- (void)convertInterfaceDescription:(NSString *)interfaceDescription
                               port:(uint16_t)port
                       intoAddress4:(NSData **)interfaceAddr4Ptr
                           address6:(NSData **)interfaceAddr6Ptr
@@ -2842,7 +2842,7 @@ enum GCDAsyncUdpSocketConfig
 		NSData *interface4 = nil;
 		NSData *interface6 = nil;
 		
-		[self convertIntefaceDescription:interface port:port intoAddress4:&interface4 address6:&interface6];
+		[self convertInterfaceDescription:interface port:port intoAddress4:&interface4 address6:&interface6];
 		
 		if ((interface4 == nil) && (interface6 == nil))
 		{
@@ -3455,7 +3455,7 @@ enum GCDAsyncUdpSocketConfig
 		NSData *interfaceAddr4 = nil;
 		NSData *interfaceAddr6 = nil;
 		
-		[self convertIntefaceDescription:interface port:0 intoAddress4:&interfaceAddr4 address6:&interfaceAddr6];
+		[self convertInterfaceDescription:interface port:0 intoAddress4:&interfaceAddr4 address6:&interfaceAddr6];
 		
 		if ((interfaceAddr4 == nil) && (interfaceAddr6 == nil))
 		{
@@ -3556,7 +3556,7 @@ enum GCDAsyncUdpSocketConfig
         NSData *interfaceAddr4 = nil;
         NSData *interfaceAddr6 = nil;
 
-        [self convertIntefaceDescription:interface port:0 intoAddress4:&interfaceAddr4 address6:&interfaceAddr6];
+        [self convertInterfaceDescription:interface port:0 intoAddress4:&interfaceAddr4 address6:&interfaceAddr6];
 
         if (interfaceAddr4 == nil)
         {
@@ -3614,7 +3614,7 @@ enum GCDAsyncUdpSocketConfig
         NSData *interfaceAddr4 = nil;
         NSData *interfaceAddr6 = nil;
 
-        [self convertIntefaceDescription:interface port:0 intoAddress4:&interfaceAddr4 address6:&interfaceAddr6];
+        [self convertInterfaceDescription:interface port:0 intoAddress4:&interfaceAddr4 address6:&interfaceAddr6];
 
         if (interfaceAddr6 == nil)
         {
@@ -5463,7 +5463,7 @@ Failed:
 //		return NO;
 //	}
 //	
-//	LogVerbose(@"Enabling backgrouding on socket");
+//	LogVerbose(@"Enabling backgrounding on socket");
 //	
 //	BOOL r1, r2;
 //	

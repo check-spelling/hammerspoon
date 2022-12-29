@@ -112,7 +112,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)stop;
 
 /**
- *	Sends any pending note offs for the command scheduler immeidately.
+ *	Sends any pending note offs for the command scheduler immediately.
  *	This can be useful if you are changing the notes in the MIDI track and
  *	you want the old notes to immediately stop rather than play until their
  *	original end time stamp.

@@ -7,7 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class SentrySpanId;
 
 /**
- * Tracks performance synchronizing span with its childs.
+ * Tracks performance synchronizing span with its children.
  * A span will be finished only when all its children are finished.
  */
 @interface SentryPerformanceTracker : NSObject
@@ -19,7 +19,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  * Starts a new span if no span is active,
- * then bind it to the scope if no span is binded.
+ * then bind it to the scope if no span is bound.
  * If there`s an active span, starts a child of the active span.
  *
  * @param name Span name.
@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Activate the span with `spanId`
  * to create any call to startSpan as a child.
- * If the there is no span with the fiven spanId
+ * If the there is no span with the given spanId
  * block is executed anyway.
  *
  * @param spanId Id of the span to activate

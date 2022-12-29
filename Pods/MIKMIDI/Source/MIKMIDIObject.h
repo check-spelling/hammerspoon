@@ -88,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Virtual devices can be used to wrap virtual, deviceless endpoints created
  *  e.g. by other software, some Native Instruments controllers, etc.
  *
- *  For MIKMIDIEntitys, virtual means that the entity is part of a virtual device
+ *  For MIKMIDIEntities, virtual means that the entity is part of a virtual device
  *  and its endpoints are virtual endpoints.
  *
  *  For MIKMIDIEndpoints, virtual means that the endpoint is a virtual endpoint,

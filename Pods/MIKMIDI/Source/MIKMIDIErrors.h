@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, MIKMIDIErrorCode) {
 	/**
 	 *  An error ocurred while creating a new track in an MIKMIDISequence.
 	 *  The error's info dictionary may contain an underlying error with 
-	 *  more informationin for its NSUnderlyingErrorKey.
+	 *  more information for its NSUnderlyingErrorKey.
 	 */
 	MIKMIDISequenceAddTrackFailedErrorCode,
 	

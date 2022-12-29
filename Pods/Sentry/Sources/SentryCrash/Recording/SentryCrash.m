@@ -338,7 +338,7 @@ getBasePath()
              if (error != nil) {
                  SentryCrashLOG_ERROR(@"Failed to send reports: %@", error);
              }
-             if ((self.deleteBehaviorAfterSendAll == SentryCrashCDeleteOnSucess && completed)
+             if ((self.deleteBehaviorAfterSendAll == SentryCrashCDeleteOnSuccess && completed)
                  || self.deleteBehaviorAfterSendAll == SentryCrashCDeleteAlways) {
                  sentrycrash_deleteAllReports();
              }

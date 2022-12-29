@@ -526,10 +526,10 @@ static void MIKSequenceCallback(void *inClientData, MusicSequence inSequence, Mu
 
 - (BOOL)getTempo:(Float64 *)bpm atTimeStamp:(MusicTimeStamp)timeStamp
 {
-	static BOOL deprectionMsgShown = NO;
-	if (!deprectionMsgShown) {
+	static BOOL depreciationMsgShown = NO;
+	if (!depreciationMsgShown) {
 		NSLog(@"WARNING: %s has been deprecated. Please use -timeSignatureAtTimeStamp: instead. This message will only be logged once", __PRETTY_FUNCTION__);
-		deprectionMsgShown = YES;
+		depreciationMsgShown = YES;
 	}
 	
 	if (!bpm) return NO;
@@ -541,10 +541,10 @@ static void MIKSequenceCallback(void *inClientData, MusicSequence inSequence, Mu
 
 - (BOOL)getTimeSignature:(MIKMIDITimeSignature *)signature atTimeStamp:(MusicTimeStamp)timeStamp
 {
-	static BOOL deprectionMsgShown = NO;
-	if (!deprectionMsgShown) {
+	static BOOL depreciationMsgShown = NO;
+	if (!depreciationMsgShown) {
 		NSLog(@"WARNING: %s has been deprecated. Please use -timeSignatureAtTimeStamp: instead. This message will only be logged once", __PRETTY_FUNCTION__);
-		deprectionMsgShown = YES;
+		depreciationMsgShown = YES;
 	}
 	
 	if (!signature) return NO;

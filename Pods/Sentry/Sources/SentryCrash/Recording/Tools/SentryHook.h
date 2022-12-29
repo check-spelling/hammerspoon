@@ -1,5 +1,5 @@
-#ifndef SENRTY_HOOK_h
-#define SENRTY_HOOK_h
+#ifndef SENTRY_HOOK_h
+#define SENTRY_HOOK_h
 
 #include "SentryCrashThread.h"
 #include <stdint.h>
@@ -48,4 +48,4 @@ void sentrycrash_install_async_hooks(void);
  */
 void sentrycrash_deactivate_async_hooks(void);
 
-#endif /* SENRTY_HOOK_h */
+#endif /* SENTRY_HOOK_h */

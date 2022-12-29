@@ -64,7 +64,7 @@ typedef NS_ERROR_ENUM(GCDAsyncUdpSocketErrorDomain, GCDAsyncUdpSocketError) {
 
 /**
  * Called if an error occurs while trying to send a datagram.
- * This could be due to a timeout, or something more serious such as the data being too large to fit in a sigle packet.
+ * This could be due to a timeout, or something more serious such as the data being too large to fit in a single packet.
 **/
 - (void)udpSocket:(GCDAsyncUdpSocket *)sock didNotSendDataWithTag:(long)tag dueToError:(NSError * _Nullable)error;
 
@@ -116,7 +116,7 @@ typedef NS_ERROR_ENUM(GCDAsyncUdpSocketErrorDomain, GCDAsyncUdpSocketError) {
  *                  pass the parsed data to the delegate.
  * 
  * @returns - YES if the received packet should be passed onto the delegate.
- *            NO if the received packet should be discarded, and not reported to the delegete.
+ *            NO if the received packet should be discarded, and not reported to the delegate.
  * 
  * Example:
  * 
@@ -260,7 +260,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * entire datagram is lost).  You are much better off sending a large number of smaller
  * UDP datagrams, preferably using a path MTU algorithm to avoid fragmentation.
  *
- * You must set it before the sockt is created otherwise it won't work.
+ * You must set it before the socket is created otherwise it won't work.
  *
  **/
 - (uint16_t)maxSendBufferSize;
@@ -281,7 +281,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * The localAddress method returns a sockaddr structure wrapped in a NSData object.
  * The localHost method returns the human readable IP address as a string.
  * 
- * Note: Address info may not be available until after the socket has been binded, connected
+ * Note: Address info may not be available until after the socket has been bound, connected
  * or until after data has been sent.
 **/
 - (nullable NSData *)localAddress;
@@ -492,7 +492,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
 
 /**
  * Send multicast on a specified interface.
- * For IPv4, interface should be the the IP address of the interface (eg @"192.168.10.1").
+ * For IPv4, interface should be the IP address of the interface (eg @"192.168.10.1").
  * For IPv6, interface should be the a network interface name (eg @"en0").
  *
  * On success, returns YES.
@@ -543,7 +543,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  *     If passing NSMutableData, please read the thread-safety notice below.
  * 
  * @param timeout
- *    The timeout for the send opeartion.
+ *    The timeout for the send operation.
  *    If the timeout value is negative, the send operation will not use a timeout.
  * 
  * @param tag
@@ -592,7 +592,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  *    The port of the host to send to.
  * 
  * @param timeout
- *    The timeout for the send opeartion.
+ *    The timeout for the send operation.
  *    If the timeout value is negative, the send operation will not use a timeout.
  * 
  * @param tag
@@ -640,7 +640,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  *     The address to send the data to (specified as a sockaddr structure wrapped in a NSData object).
  * 
  * @param timeout
- *    The timeout for the send opeartion.
+ *    The timeout for the send operation.
  *    If the timeout value is negative, the send operation will not use a timeout.
  * 
  * @param tag
@@ -845,7 +845,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * Any pending send operations are discarded.
  * 
  * The GCDAsyncUdpSocket instance may optionally be used again.
- *   (it will setup/configure/use another unnderlying BSD socket).
+ *   (it will setup/configure/use another underlying BSD socket).
 **/
 - (void)close;
 
@@ -853,7 +853,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * Closes the underlying socket after all pending send operations have been sent.
  * 
  * The GCDAsyncUdpSocket instance may optionally be used again.
- *   (it will setup/configure/use another unnderlying BSD socket).
+ *   (it will setup/configure/use another underlying BSD socket).
 **/
 - (void)closeAfterSending;
 
@@ -968,7 +968,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * See the documentation for the performBlock: method above.
  * 
  * Provides access to the socket's file descriptor(s).
- * If the socket isn't connected, or explicity bound to a particular interface,
+ * If the socket isn't connected, or explicitly bound to a particular interface,
  * it might actually have multiple internal socket file descriptors - one for IPv4 and one for IPv6.
 **/
 - (int)socketFD;

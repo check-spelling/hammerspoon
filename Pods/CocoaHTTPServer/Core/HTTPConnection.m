@@ -366,7 +366,7 @@ static NSMutableArray *recentNonces;
 
 /**
  * Returns the authentication realm.
- * In this generic implmentation, a default realm is used for the entire server.
+ * In this generic implementation, a default realm is used for the entire server.
 **/
 - (NSString *)realm
 {
@@ -729,7 +729,7 @@ static NSMutableArray *recentNonces;
 
 /**
  * Attempts to parse the given range header into a series of sequential non-overlapping ranges.
- * If successfull, the variables 'ranges' and 'rangeIndex' will be updated, and YES will be returned.
+ * If successful, the variables 'ranges' and 'rangeIndex' will be updated, and YES will be returned.
  * Otherwise, NO is returned, and the range request should be ignored.
  **/
 - (BOOL)parseRangeRequest:(NSString *)rangeHeader withContentLength:(UInt64)contentLength
@@ -951,7 +951,7 @@ static NSMutableArray *recentNonces;
 				
 				// Note: There is a timing issue here that should be pointed out.
 				// 
-				// A bug that existed in previous versions happend like so:
+				// A bug that existed in previous versions happened like so:
 				// - We invoked [self die]
 				// - This caused us to get released, and our dealloc method to start executing
 				// - Meanwhile, AsyncSocket noticed a disconnect, and began to dispatch a socketDidDisconnect at us
@@ -1036,13 +1036,13 @@ static NSMutableArray *recentNonces;
 	// Status Code 206 - Partial Content
 	HTTPMessage *response = [[HTTPMessage alloc] initResponseWithStatusCode:206 description:nil version:HTTPVersion1_1];
 	
-	// We have to send each range using multipart/byteranges
-	// So each byterange has to be prefix'd and suffix'd with the boundry
+	// We have to send each range using multipart/byte ranges
+	// So each byte range has to be prefix'd and suffix'd with the boundary
 	// Example:
 	// 
 	// HTTP/1.1 206 Partial Content
 	// Content-Length: 220
-	// Content-Type: multipart/byteranges; boundary=4554d24e986f76dd6
+	// Content-Type: multipart/byte ranges; boundary=4554d24e986f76dd6
 	// 
 	// 
 	// --4554d24e986f76dd6
@@ -1058,11 +1058,11 @@ static NSMutableArray *recentNonces;
 	ranges_headers = [[NSMutableArray alloc] initWithCapacity:[ranges count]];
 	
 	CFUUIDRef theUUID = CFUUIDCreate(NULL);
-	ranges_boundry = (__bridge_transfer NSString *)CFUUIDCreateString(NULL, theUUID);
+	ranges_boundary = (__bridge_transfer NSString *)CFUUIDCreateString(NULL, theUUID);
 	CFRelease(theUUID);
 	
-	NSString *startingBoundryStr = [NSString stringWithFormat:@"\r\n--%@\r\n", ranges_boundry];
-	NSString *endingBoundryStr = [NSString stringWithFormat:@"\r\n--%@--\r\n", ranges_boundry];
+	NSString *startingBoundaryStr = [NSString stringWithFormat:@"\r\n--%@\r\n", ranges_boundary];
+	NSString *endingBoundaryStr = [NSString stringWithFormat:@"\r\n--%@--\r\n", ranges_boundary];
 	
 	UInt64 actualContentLength = 0;
 	
@@ -1075,7 +1075,7 @@ static NSMutableArray *recentNonces;
 		NSString *contentRangeVal = [NSString stringWithFormat:@"bytes %@/%qu", rangeStr, contentLength];
 		NSString *contentRangeStr = [NSString stringWithFormat:@"Content-Range: %@\r\n\r\n", contentRangeVal];
 		
-		NSString *fullHeader = [startingBoundryStr stringByAppendingString:contentRangeStr];
+		NSString *fullHeader = [startingBoundaryStr stringByAppendingString:contentRangeStr];
 		NSData *fullHeaderData = [fullHeader dataUsingEncoding:NSUTF8StringEncoding];
 		
 		[ranges_headers addObject:fullHeaderData];
@@ -1084,14 +1084,14 @@ static NSMutableArray *recentNonces;
 		actualContentLength += range.length;
 	}
 	
-	NSData *endingBoundryData = [endingBoundryStr dataUsingEncoding:NSUTF8StringEncoding];
+	NSData *endingBoundaryData = [endingBoundaryStr dataUsingEncoding:NSUTF8StringEncoding];
 	
-	actualContentLength += [endingBoundryData length];
+	actualContentLength += [endingBoundaryData length];
 	
 	NSString *contentLengthStr = [NSString stringWithFormat:@"%qu", actualContentLength];
 	[response setHeaderField:@"Content-Length" value:contentLengthStr];
 	
-	NSString *contentTypeStr = [NSString stringWithFormat:@"multipart/byteranges; boundary=%@", ranges_boundry];
+	NSString *contentTypeStr = [NSString stringWithFormat:@"multipart/byte ranges; boundary=%@", ranges_boundary];
 	[response setHeaderField:@"Content-Type" value:contentTypeStr];
 	
 	return response;
@@ -1281,7 +1281,7 @@ static NSMutableArray *recentNonces;
 			else
 			{
 				// Client is requesting multiple ranges
-				// We have to send each range using multipart/byteranges
+				// We have to send each range using multipart/byte ranges
 				
 				// Write range header
 				NSData *rangeHeaderData = [ranges_headers objectAtIndex:0];
@@ -1521,11 +1521,11 @@ static NSMutableArray *recentNonces;
 		}
 		else
 		{
-			// We're not done yet - we still have to send the closing boundry tag
-			NSString *endingBoundryStr = [NSString stringWithFormat:@"\r\n--%@--\r\n", ranges_boundry];
-			NSData *endingBoundryData = [endingBoundryStr dataUsingEncoding:NSUTF8StringEncoding];
+			// We're not done yet - we still have to send the closing boundary tag
+			NSString *endingBoundaryStr = [NSString stringWithFormat:@"\r\n--%@--\r\n", ranges_boundary];
+			NSData *endingBoundaryData = [endingBoundaryStr dataUsingEncoding:NSUTF8StringEncoding];
 			
-			[asyncSocket writeData:endingBoundryData withTimeout:TIMEOUT_WRITE_HEAD tag:HTTP_RESPONSE];
+			[asyncSocket writeData:endingBoundaryData withTimeout:TIMEOUT_WRITE_HEAD tag:HTTP_RESPONSE];
 		}
 	}
 }
@@ -2031,7 +2031,7 @@ static NSMutableArray *recentNonces;
 				// This could be an attempted DOS attack
 				[asyncSocket disconnect];
 				
-				// Explictly return to ensure we don't do anything after the socket disconnect
+				// Explicitly return to ensure we don't do anything after the socket disconnect
 				return;
 			}
 			else
@@ -2298,7 +2298,7 @@ static NSMutableArray *recentNonces;
 				// This could be an attempted DOS attack
 				[asyncSocket disconnect];
 				
-				// Explictly return to ensure we don't do anything after the socket disconnect
+				// Explicitly return to ensure we don't do anything after the socket disconnect
 				return;
 			}
 			
@@ -2431,7 +2431,7 @@ static NSMutableArray *recentNonces;
 			// Terminate the connection
 			[asyncSocket disconnect];
 			
-			// Explictly return to ensure we don't do anything after the socket disconnects
+			// Explicitly return to ensure we don't do anything after the socket disconnects
 			return;
 		}
 		else
@@ -2533,7 +2533,7 @@ static NSMutableArray *recentNonces;
 
 /**
  * This method is called if the response encounters some critical error,
- * and it will be unable to fullfill the request.
+ * and it will be unable to fulfill the request.
 **/
 - (void)responseDidAbort:(NSObject<HTTPResponse> *)sender
 {
@@ -2581,7 +2581,7 @@ static NSMutableArray *recentNonces;
 	
 	ranges = nil;
 	ranges_headers = nil;
-	ranges_boundry = nil;
+	ranges_boundary = nil;
 }
 
 /**

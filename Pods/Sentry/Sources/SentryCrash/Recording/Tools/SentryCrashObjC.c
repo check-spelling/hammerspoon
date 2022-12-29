@@ -422,7 +422,7 @@ extractTaggedNSDate(const void *const object)
  * Note: The Objective-C runtime is free to change a class address,
  * so I can't just blindly store class pointers at application start
  * and then compare against them later. However, comparing strings is
- * slow, so I've reached a compromise. Since I'm omly using this at
+ * slow, so I've reached a compromise. Since I'm only using this at
  * crash time, I can assume that the Objective-C environment is frozen.
  * As such, I can keep a cache of discovered classes. If, however, this
  * library is used outside of a frozen environment, caching will be
@@ -1079,7 +1079,7 @@ sentrycrashobjc_ivarNamed(const void *const classPtr, const char *name, SentryCr
     const struct ivar_list_t *ivars = getClassRO(classPtr)->ivars;
     uintptr_t ivarPtr = (uintptr_t)&ivars->first;
     const struct ivar_t *ivar = (void *)ivarPtr;
-    // For unknown reasons sometimes ivars is null and tests become flakey
+    // For unknown reasons sometimes ivars is null and tests become flaky
     if (ivars == NULL) {
         return false;
     }

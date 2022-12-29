@@ -47,8 +47,8 @@ NS_ASSUME_NONNULL_BEGIN
  *  MIKMIDI does not include built in support for automatically routing messages using a mapping,
  *  so a user of MIKMIDI must write some code to make this happen. Typically, this is done by having
  *  a single controller in the application be responsible for receiving all incoming MIDI messages.
- *  When a MIDI message is received, it can query the MIDI mapping for the mapping item correspoding
- *  to the incomding message, then send the command to the mapped responder. Example code for this scenario:
+ *  When a MIDI message is received, it can query the MIDI mapping for the mapping item corresponding
+ *  to the incoming message, then send the command to the mapped responder. Example code for this scenario:
  *
  *  	- (void)connectToMIDIDevice:(MIKMIDIDevice *)device {
  *  		MIKMIDIDeviceManager *manager = [MIKMIDIDeviceManager sharedDeviceManager];

@@ -788,10 +788,10 @@
 
 - (BOOL)getTrackNumber:(UInt32 *)trackNumber
 {
-	static BOOL deprectionMsgShown = NO;
-	if (!deprectionMsgShown) {
+	static BOOL depreciationMsgShown = NO;
+	if (!depreciationMsgShown) {
 		NSLog(@"WARNING: %s has been deprecated. Please use -trackNumber instead. This message will only be logged once", __PRETTY_FUNCTION__);
-		deprectionMsgShown = YES;
+		depreciationMsgShown = YES;
 	}
 	NSInteger result = self.trackNumber;
 	*trackNumber = (UInt32)result;
@@ -819,10 +819,10 @@
 
 - (BOOL)insertMIDIEvent:(MIKMIDIEvent *)event
 {
-	static BOOL deprectionMsgShown = NO;
-	if (!deprectionMsgShown) {
+	static BOOL depreciationMsgShown = NO;
+	if (!depreciationMsgShown) {
 		NSLog(@"WARNING: %s has been deprecated. Please use -addEvent: instead. This message will only be logged once.", __PRETTY_FUNCTION__);
-		deprectionMsgShown = YES;
+		depreciationMsgShown = YES;
 	}
 	
 	[self addEvent:event];
@@ -831,10 +831,10 @@
 
 - (BOOL)insertMIDIEvents:(NSSet *)events
 {
-	static BOOL deprectionMsgShown = NO;
-	if (!deprectionMsgShown) {
+	static BOOL depreciationMsgShown = NO;
+	if (!depreciationMsgShown) {
 		NSLog(@"WARNING: %s has been deprecated. Please use -addEvent: instead. This message will only be logged once.", __PRETTY_FUNCTION__);
-		deprectionMsgShown = YES;
+		depreciationMsgShown = YES;
 	}
 	
 	for (MIKMIDIEvent *event in events) {
@@ -845,10 +845,10 @@
 
 - (BOOL)removeMIDIEvents:(NSSet *)events
 {
-	static BOOL deprectionMsgShown = NO;
-	if (!deprectionMsgShown) {
+	static BOOL depreciationMsgShown = NO;
+	if (!depreciationMsgShown) {
 		NSLog(@"WARNING: %s has been deprecated. Please use -removeEvent: instead. This message will only be logged once.", __PRETTY_FUNCTION__);
-		deprectionMsgShown = YES;
+		depreciationMsgShown = YES;
 	}
 	
 	for (MIKMIDIEvent *event in events) {
@@ -859,10 +859,10 @@
 
 - (BOOL)clearAllEvents
 {
-	static BOOL deprectionMsgShown = NO;
-	if (!deprectionMsgShown) {
+	static BOOL depreciationMsgShown = NO;
+	if (!depreciationMsgShown) {
 		NSLog(@"WARNING: %s has been deprecated. Please use -removeAllEvents instead. This message will only be logged once.", __PRETTY_FUNCTION__);
-		deprectionMsgShown = YES;
+		depreciationMsgShown = YES;
 	}
 	
 	[self removeAllEvents];

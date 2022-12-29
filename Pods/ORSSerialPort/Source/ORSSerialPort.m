@@ -568,7 +568,7 @@ static __strong NSMutableArray *allSerialPorts;
 	});
 }
 
-#pragma mark Port Propeties Methods
+#pragma mark Port Properties Methods
 
 - (void)setPortOptions;
 {

@@ -182,7 +182,7 @@ addJSONData(const char *const data, const int length, void *const userData)
 // ============================================================================
 
 static double
-getCurentTime()
+getCurrentTime()
 {
     struct timeval tv;
     gettimeofday(&tv, NULL);
@@ -192,7 +192,7 @@ getCurentTime()
 static double
 timeSince(double timeInSeconds)
 {
-    return getCurentTime() - timeInSeconds;
+    return getCurrentTime() - timeInSeconds;
 }
 
 /** Load the persistent state portion of a crash context.
@@ -351,7 +351,7 @@ sentrycrashstate_notifyAppActive(const bool isActive)
     if (g_isEnabled) {
         g_state.applicationIsActive = isActive;
         if (isActive) {
-            g_state.appStateTransitionTime = getCurentTime();
+            g_state.appStateTransitionTime = getCurrentTime();
         } else {
             double duration = timeSince(g_state.appStateTransitionTime);
             g_state.activeDurationSinceLaunch += duration;
@@ -368,13 +368,13 @@ sentrycrashstate_notifyAppInForeground(const bool isInForeground)
 
         g_state.applicationIsInForeground = isInForeground;
         if (isInForeground) {
-            double duration = getCurentTime() - g_state.appStateTransitionTime;
+            double duration = getCurrentTime() - g_state.appStateTransitionTime;
             g_state.backgroundDurationSinceLaunch += duration;
             g_state.backgroundDurationSinceLastCrash += duration;
             g_state.sessionsSinceLastCrash++;
             g_state.sessionsSinceLaunch++;
         } else {
-            g_state.appStateTransitionTime = getCurentTime();
+            g_state.appStateTransitionTime = getCurrentTime();
             saveState(stateFilePath);
         }
     }

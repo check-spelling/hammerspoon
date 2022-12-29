@@ -234,7 +234,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Allocates and returns (by reference) a CoreMIDI MIDIPacketList created from an array of MIKMIDICommand instances.
  *  The created MIDIPacketList will be sized according to the number of commands and their contents. Ownership is
- *  transfered to the caller which becomes responsible for freeing the allocated memory.
+ *  transferred to the caller which becomes responsible for freeing the allocated memory.
  *  Used by MIKMIDI when sending commands. Typically, this is not needed by clients of MIKMIDI.
  *
  *  @param outPacketList   A pointer to a pointer to a MIDIPacketList structure which will point to the created MIDIPacketList

@@ -109,7 +109,7 @@ typedef enum {
 #define SentryCrashMonitorTypeRequired                                                             \
     (SentryCrashMonitorTypeSystem | SentryCrashMonitorTypeApplicationState)
 
-/** Effectively disables automatica reporting. The only way to generate a report
+/** Effectively disables automatic reporting. The only way to generate a report
  * in this mode is by manually calling sentrycrash_reportUserException().
  */
 #define SentryCrashMonitorTypeManual                                                               \

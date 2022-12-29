@@ -29,7 +29,7 @@
 extern "C" {
 #endif
 
-/** Generate a new human readabale, null terminated, globally unique ID string.
+/** Generate a new human readable, null terminated, globally unique ID string.
  *
  * @param destinationBuffer37Bytes Buffer of at least 37 bytes to hold the ID.
  */

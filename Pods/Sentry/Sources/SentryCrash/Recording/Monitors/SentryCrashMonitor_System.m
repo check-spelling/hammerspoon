@@ -269,7 +269,7 @@ getAppUUID()
 
 /** Get the current CPU's architecture.
  *
- * @return The current CPU archutecture.
+ * @return The current CPU architecture.
  */
 static const char *
 getCPUArchForCPUType(cpu_type_t cpuType, cpu_subtype_t subType)

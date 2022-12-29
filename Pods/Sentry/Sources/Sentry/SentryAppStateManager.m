@@ -26,14 +26,14 @@ SentryAppStateManager ()
 @implementation SentryAppStateManager
 
 - (instancetype)initWithOptions:(SentryOptions *)options
-                   crashAdapter:(SentryCrashAdapter *)crashAdatper
+                   crashAdapter:(SentryCrashAdapter *)crashAdapter
                     fileManager:(SentryFileManager *)fileManager
             currentDateProvider:(id<SentryCurrentDateProvider>)currentDateProvider
                          sysctl:(SentrySysctl *)sysctl
 {
     if (self = [super init]) {
         self.options = options;
-        self.crashAdapter = crashAdatper;
+        self.crashAdapter = crashAdapter;
         self.fileManager = fileManager;
         self.currentDate = currentDateProvider;
         self.sysctl = sysctl;

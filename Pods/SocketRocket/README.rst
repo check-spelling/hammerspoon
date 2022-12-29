@@ -147,7 +147,7 @@ Known Issues/Server Todo's
 Testing
 -------
 Included are setup scripts for the python testing environment.  It comes
-packaged with vitualenv so all the dependencies are installed in userland.
+packaged with virtualenv so all the dependencies are installed in userland.
 
 To run the short test from the command line, run::
 

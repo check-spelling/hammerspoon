@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  messages defined by individual manufacturers of MIDI devices. They
  *  can contain arbitrary data and can be used to support commands and responses
  *  not explicitly supported by the standard portion of MIDI spec. There are also
- *  some "Universal Exclusive Mesages", which while a type of SysEx message,
+ *  some "Universal Exclusive Messages", which while a type of SysEx message,
  *  are not manufacturer/device specific.
  */
 @interface MIKMIDISystemExclusiveCommand : MIKMIDISystemMessageCommand

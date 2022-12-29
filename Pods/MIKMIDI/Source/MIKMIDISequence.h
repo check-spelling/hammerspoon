@@ -32,23 +32,23 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Creates and initializes a new instance of MIKMIDISequence.
  *
- *  @return A new instance of MIKMIDISequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence, or nil if an error occurred.
  */
 + (nullable instancetype)sequence;
 
 /**
- *  Creates and initilazes a new instance of MIKMIDISequence from a MIDI file.
+ *  Creates and initializes a new instance of MIKMIDISequence from a MIDI file.
  *
  *  @param fileURL The URL of the MIDI file.
  *  @param error If an error occurs, upon returns contains an NSError object that describes the problem. If you are not interested in possible errors,
  *  you may pass in NULL.
  *
- *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occurred.
  */
 + (nullable instancetype)sequenceWithFileAtURL:(NSURL *)fileURL error:(NSError **)error;
 
 /**
- *  Creates and initilazes a new instance of MIKMIDISequence from a MIDI file.
+ *  Creates and initializes a new instance of MIKMIDISequence from a MIDI file.
  *
  *  @param fileURL The URL of the MIDI file.
  *  @param convertMIDIChannelsToTracks Determines whether or not the track structure should be altered. When YES, the resulting sequence will
@@ -57,23 +57,23 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param error If an error occurs, upon returns contains an NSError object that describes the problem. If you are not interested in possible errors,
  *  you may pass in NULL.
  *
- *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occurred.
  */
 + (nullable instancetype)sequenceWithFileAtURL:(NSURL *)fileURL convertMIDIChannelsToTracks:(BOOL)convertMIDIChannelsToTracks error:(NSError **)error;
 
 /**
- *  Initilazes a new instance of MIKMIDISequence from a MIDI file.
+ *  Initializes a new instance of MIKMIDISequence from a MIDI file.
  *
  *  @param fileURL The URL of the MIDI file.
  *  @param error If an error occurs, upon return contains an NSError object that describes the problem. If you are not interested in possible errors,
  *  you may pass in NULL.
  *
- *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occurred.
  */
 - (nullable instancetype)initWithFileAtURL:(NSURL *)fileURL error:(NSError **)error;
 
 /**
- *  Initilazes a new instance of MIKMIDISequence from a MIDI file.
+ *  Initializes a new instance of MIKMIDISequence from a MIDI file.
  *
  *  @param fileURL The URL of the MIDI file.
  *  @param convertMIDIChannelsToTracks Determines whether or not the track structure should be altered. When YES, the resulting sequence will
@@ -82,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param error If an error occurs, upon return contains an NSError object that describes the problem. If you are not interested in possible errors,
  *  you may pass in NULL.
  *
- *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occurred.
  */
 - (nullable instancetype)initWithFileAtURL:(NSURL *)fileURL convertMIDIChannelsToTracks:(BOOL)convertMIDIChannelsToTracks error:(NSError **)error;
 
@@ -259,7 +259,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)setTimeSignature:(MIKMIDITimeSignature)signature atTimeStamp:(MusicTimeStamp)timeStamp;
 
 /**
- *  Returns the time signature in effect at the the specified time stamp.
+ *  Returns the time signature in effect at the specified time stamp.
  *
  *  @param timeStamp The time stamp at which you would like to know the receiver's time signature.
  *
@@ -335,7 +335,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param data The MIDI data for the new sequence.
  *
- *  @return A new instance of MIKMIDISequence containing the MIDI data, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the MIDI data, or nil if an error occurred.
  */
 + (nullable instancetype)sequenceWithData:(NSData *)data DEPRECATED_ATTRIBUTE;
 
@@ -346,7 +346,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param data The MIDI data for the new sequence.
  *
- *  @return A new instance of MIKMIDISequence containing the MIDI data, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the MIDI data, or nil if an error occurred.
  */
 - (nullable instancetype)initWithData:(NSData *)data DEPRECATED_ATTRIBUTE;
 
@@ -385,7 +385,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  A MusicTimeStamp that is less than the sequence's length, but is at an equivalent position in the looped sequence as loopedTimeStamp
  *
- *  When the music sequence is being looped by an MIKMIDIPlayer, the time stamp of the player continuosly increases. This method can be
+ *  When the music sequence is being looped by an MIKMIDIPlayer, the time stamp of the player continuously increases. This method can be
  *  used to find where in the MIDI sequence the looped playback is at. For example, in a sequence with a length of 16,
  *  calling this method with a loopedTimeStamp of 17 would return 1.
  *

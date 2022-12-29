@@ -115,7 +115,7 @@ NSString * const ASCIIContextShouldAntialias    = @"ASCIIContextShouldAntialias"
     }
     
     // pixels should be regularly spaced: the actual gap is the greater common divisor
-    // no need to make that a fancy algorithm, let's just enumarate all possible values going down, and including, the smallest gap
+    // no need to make that a fancy algorithm, let's just enumerate all possible values going down, and including, the smallest gap
     NSUInteger smallestGap = gaps.firstIndex;
     if (smallestGap == NSNotFound)
         smallestGap = 1;
@@ -140,7 +140,7 @@ NSString * const ASCIIContextShouldAntialias    = @"ASCIIContextShouldAntialias"
     NSUInteger lastColumn = pixelColumns.lastIndex;
     NSUInteger countCols = 1 + (lastColumn - firstColumn) / pixelGap;
     NSUInteger countRows = lenientRep.count;
-    NSAssert(((lastColumn - firstColumn) % pixelGap) == 0, @"the first and last pixel column should be spearated by an integer multiple of `pixelGap`");
+    NSAssert(((lastColumn - firstColumn) % pixelGap) == 0, @"the first and last pixel column should be separated by an integer multiple of `pixelGap`");
     if (concatenatedStrings.length == countCols * countRows)
         return lenientRep;
     NSMutableString *strictString = [NSMutableString stringWithCapacity:countCols * countRows];

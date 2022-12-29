@@ -87,7 +87,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 
     int offset = 0;
 
-	// don't parse data unless its size is greater then boundary length, so we couldn't
+	// don't parse data unless its size is greater than boundary length, so we couldn't
 	// misfind the boundary, if it got split into different data chunks
 	NSUInteger sizeToLeavePending = boundaryData.length;
 
@@ -202,7 +202,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 			// we won't parse header parts, as they won't be too large.
 			int headerEnd = [self findHeaderEnd:workingData fromOffset:offset];
 			if( -1 == headerEnd ) {
-				// didn't recieve the full header yet.
+				// didn't receive the full header yet.
 				if( !pendingData.length) {
 					// store the unprocessed data till next chunks come
 					[pendingData appendBytes:data.bytes + offset length:data.length - offset];
@@ -223,7 +223,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 
 				if( nil == currentHeader ) {
 					// we've found the data is in wrong format.
-					HTTPLogError(@"MultipartFormDataParser: MultipartFormDataParser: wrong input format, coulnd't get a valid header");
+					HTTPLogError(@"MultipartFormDataParser: MultipartFormDataParser: wrong input format, couldn't get a valid header");
 					return NO;
 				}
                 if( [delegate respondsToSelector:@selector(processStartOfPartWithHeader:)] ) {
@@ -437,7 +437,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 	}
 	
 	if( encoding == contentTransferEncoding_quotedPrintable ) {
-		// we don't pass more less then 3 bytes anyway.
+		// we don't pass more less than 3 bytes anyway.
 		if( length <= 2 ) 
 			return length;
 		// check the last bytes to be start of encoded symbol.

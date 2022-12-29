@@ -86,7 +86,7 @@ SentryFileManager ()
     [fileManager removeItemAtPath:self.sentryPath error:nil];
 }
 
-- (NSString *)uniqueAcendingJsonName
+- (NSString *)uniqueAscendingJsonName
 {
     // %f = double
     // %05lu = unsigned with always 5 digits and leading zeros if number is too small. We
@@ -347,7 +347,7 @@ SentryFileManager ()
 - (NSString *)storeData:(NSData *)data toPath:(NSString *)path
 {
     @synchronized(self) {
-        NSString *finalPath = [path stringByAppendingPathComponent:[self uniqueAcendingJsonName]];
+        NSString *finalPath = [path stringByAppendingPathComponent:[self uniqueAscendingJsonName]];
         [SentryLog logWithMessage:[NSString stringWithFormat:@"Writing to file: %@", finalPath]
                          andLevel:kSentryLevelDebug];
         [data writeToFile:finalPath options:NSDataWritingAtomic error:nil];

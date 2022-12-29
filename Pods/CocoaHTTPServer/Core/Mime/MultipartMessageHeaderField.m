@@ -73,7 +73,7 @@ NSString* extractParamValue(const char* bytes, NSUInteger length, NSStringEncodi
 	
 	value = [[NSString alloc] initWithBytes:bytes length: separatorOffset encoding:encoding];
 	HTTPLogVerbose(@"MultipartFormDataParser: Processing  header field '%@' : '%@'",name,value);
-	// skipe the separator and the next ' ' symbol
+	// skip the separator and the next ' ' symbol
 	bytes += separatorOffset + 2;
 	length -= separatorOffset + 2;
 
@@ -124,7 +124,7 @@ NSString* extractParamValue(const char* bytes, NSUInteger length, NSStringEncodi
 			}
 			NSString* paramValue = extractParamValue(bytes, offset,encoding);
 			 if( nil == paramValue ) {
-				HTTPLogWarn(@"MultipartFormDataParser: Failed to exctract paramValue for key %@ in header %@",currentParam,name);
+				HTTPLogWarn(@"MultipartFormDataParser: Failed to extract paramValue for key %@ in header %@",currentParam,name);
 			}
 			else {
 #ifdef DEBUG
@@ -155,7 +155,7 @@ NSString* extractParamValue(const char* bytes, NSUInteger length, NSStringEncodi
 		NSString* paramValue = extractParamValue(bytes, length, encoding);
 
 		if( nil == paramValue ) {
-			HTTPLogError(@"MultipartFormDataParser: Failed to exctract paramValue for key %@ in header %@",currentParam,name);
+			HTTPLogError(@"MultipartFormDataParser: Failed to extract paramValue for key %@ in header %@",currentParam,name);
 		}
 
 #ifdef DEBUG

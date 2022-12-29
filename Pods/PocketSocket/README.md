@@ -167,7 +167,7 @@ Currently for Objective-C there is few options for websocket clients. SocketRock
 
 PocketSocket firstly aims to provide a rich set of tools that are easy to dig into and modify when necessary. The decoupling of the network layer from the driver layer allows a lot of flexibility to incorporate the library with existing setups.
 
-Secondly we intend on keeping PocketSocket at the top of it's game. As soon as any major websocket extensions come into play you can count on them being incorporated as soon as the drafts begin to stabalize.
+Secondly we intend on keeping PocketSocket at the top of it's game. As soon as any major websocket extensions come into play you can count on them being incorporated as soon as the drafts begin to stabilize.
 
 Lastly we're set out to create the full picture from client to server all in a single, but decoupled toolkit for all use cases on iOS and OS X.
 

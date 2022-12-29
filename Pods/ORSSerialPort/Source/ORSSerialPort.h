@@ -138,7 +138,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param devicePath The full path (e.g. /dev/cu.usbserial) to the device.
  *
- *  @return An initalized `ORSSerialPort` instance, or nil if there was an error.
+ *  @return An initialized `ORSSerialPort` instance, or nil if there was an error.
  * 
  *  @see -[ORSSerialPortManager availablePorts]
  *  @see -initWithPath:
@@ -149,14 +149,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  Returns an `ORSSerialPort` instance for the serial port represented by `device`.
  *
  *  Generally, `+serialPortWithPath:` is the method to use to get port instances
- *  programatically. This method may be useful if you're doing your own
+ *  programmatically. This method may be useful if you're doing your own
  *  device discovery with IOKit functions, or otherwise have an IOKit port object
  *  you want to "turn into" an ORSSerialPort. Most people will not use this method
  *  directly.
  *
  *  @param device An IOKit port object representing the serial port device.
  *
- *  @return An initalized `ORSSerialPort` instance, or nil if there was an error.
+ *  @return An initialized `ORSSerialPort` instance, or nil if there was an error.
  *
  *  @see -[ORSSerialPortManager availablePorts]
  *  @see +serialPortWithPath:
@@ -171,7 +171,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param devicePath The full path (e.g. /dev/cu.usbserial) to the device.
  *
- *  @return An initalized `ORSSerialPort` instance, or nil if there was an error.
+ *  @return An initialized `ORSSerialPort` instance, or nil if there was an error.
  *
  *  @see -[ORSSerialPortManager availablePorts]
  *  @see +serialPortWithPath:
@@ -182,14 +182,14 @@ NS_ASSUME_NONNULL_BEGIN
  *  Returns an `ORSSerialPort` instance for the serial port represented by `device`.
  *
  *  Generally, `-initWithPath:` is the method to use to get port instances
- *  programatically. This method may be useful if you're doing your own
+ *  programmatically. This method may be useful if you're doing your own
  *  device discovery with IOKit functions, or otherwise have an IOKit port object
  *  you want to "turn into" an ORSSerialPort. Most people will not use this method
  *  directly.
  *
  *  @param device An IOKit port object representing the serial port device.
  *
- *  @return An initalized `ORSSerialPort` instance, or nil if there was an error.
+ *  @return An initialized `ORSSerialPort` instance, or nil if there was an error.
  *
  *  @see -[ORSSerialPortManager availablePorts]
  *  @see -initWithPath:
@@ -611,7 +611,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param serialPort   The `ORSSerialPort` instance representing the port that received `responseData`.
  *  @param responseData The An `NSData` instance containing the received response data.
- *  @param request      The request to which the responseData is a respone.
+ *  @param request      The request to which the responseData is a response.
  */
 - (void)serialPort:(ORSSerialPort *)serialPort didReceiveResponse:(NSData *)responseData toRequest:(ORSSerialRequest *)request;
 
@@ -630,7 +630,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Called when an error occurs during an operation involving a serial port.
  *
  *	This method is always used to report errors. No `ORSSerialPort` methods
- *  take a passed in `NSError **` reference because errors may occur asynchonously,
+ *  take a passed in `NSError **` reference because errors may occur asynchronously,
  *  after a method has returned.
  *
  *	Currently, errors reported using this method are always in the `NSPOSIXErrorDomain`,
