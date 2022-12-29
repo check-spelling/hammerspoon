@@ -12,7 +12,7 @@
 * ASCIImage reference site: [asciimage.org](http://asciimage.org)
 * Original blog post presenting ASCIImage: [Replacing Photoshop with NSString](http://cocoamine.net/blog/2015/03/20/replacing-photoshop-with-nsstring/)
 * Slides from the presentation of ASCIImage at NSConference 7: [ASCCImage slides and editor](http://cocoamine.net/blog/2015/03/21/asciimage-slides-and-editor/)
-* ASCIImage Super Studio: [source on Github](https://github.com/mz2/ASCIImage-Super-Studio)
+* ASCIImage Super Studio: [source on GitHub](https://github.com/mz2/ASCIImage-Super-Studio)
 * For ASCII art lovers: [MonoDraw](http://monodraw.helftone.com) (not affiliated with ASCIImage; just an awesome app that I like)
 
 ## FAQs
