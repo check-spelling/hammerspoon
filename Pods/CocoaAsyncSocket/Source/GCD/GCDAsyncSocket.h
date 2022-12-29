@@ -728,7 +728,7 @@ typedef NS_ERROR_ENUM(GCDAsyncSocketErrorDomain, GCDAsyncSocketError) {
  *     See Apple's documentation for SSLSetCertificate.
  *
  * - kCFStreamSSLIsServer
- *     The value must be of type NSNumber, encapsulationg a BOOL value.
+ *     The value must be of type NSNumber, encapsulating a BOOL value.
  *     See Apple's documentation for SSLCreateContext for iOS.
  *     This is optional for iOS. If not supplied, a NO value is the default.
  *     This is not needed for Mac OS X, and the value is ignored.
@@ -740,7 +740,7 @@ typedef NS_ERROR_ENUM(GCDAsyncSocketErrorDomain, GCDAsyncSocketError) {
  *
  * - GCDAsyncSocketSSLProtocolVersionMin
  * - GCDAsyncSocketSSLProtocolVersionMax
- *     The value(s) must be of type NSNumber, encapsulting a SSLProtocol value.
+ *     The value(s) must be of type NSNumber, encapsulating a SSLProtocol value.
  *     See Apple's documentation for SSLSetProtocolVersionMin & SSLSetProtocolVersionMax.
  *     See also the SSLProtocol typedef.
  * 
