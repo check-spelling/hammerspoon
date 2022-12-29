@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  Creates and initializes a new instance of MIKMIDISequence.
  *
- *  @return A new instance of MIKMIDISequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence, or nil if an error occurred.
  */
 + (nullable instancetype)sequence;
 
@@ -43,7 +43,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param error If an error occurs, upon returns contains an NSError object that describes the problem. If you are not interested in possible errors,
  *  you may pass in NULL.
  *
- *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occurred.
  */
 + (nullable instancetype)sequenceWithFileAtURL:(NSURL *)fileURL error:(NSError **)error;
 
@@ -57,7 +57,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param error If an error occurs, upon returns contains an NSError object that describes the problem. If you are not interested in possible errors,
  *  you may pass in NULL.
  *
- *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occurred.
  */
 + (nullable instancetype)sequenceWithFileAtURL:(NSURL *)fileURL convertMIDIChannelsToTracks:(BOOL)convertMIDIChannelsToTracks error:(NSError **)error;
 
@@ -68,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param error If an error occurs, upon return contains an NSError object that describes the problem. If you are not interested in possible errors,
  *  you may pass in NULL.
  *
- *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occurred.
  */
 - (nullable instancetype)initWithFileAtURL:(NSURL *)fileURL error:(NSError **)error;
 
@@ -82,7 +82,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param error If an error occurs, upon return contains an NSError object that describes the problem. If you are not interested in possible errors,
  *  you may pass in NULL.
  *
- *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the loaded file's MIDI sequence, or nil if an error occurred.
  */
 - (nullable instancetype)initWithFileAtURL:(NSURL *)fileURL convertMIDIChannelsToTracks:(BOOL)convertMIDIChannelsToTracks error:(NSError **)error;
 
@@ -335,7 +335,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param data The MIDI data for the new sequence.
  *
- *  @return A new instance of MIKMIDISequence containing the MIDI data, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the MIDI data, or nil if an error occurred.
  */
 + (nullable instancetype)sequenceWithData:(NSData *)data DEPRECATED_ATTRIBUTE;
 
@@ -346,7 +346,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @param data The MIDI data for the new sequence.
  *
- *  @return A new instance of MIKMIDISequence containing the MIDI data, or nil if an error occured.
+ *  @return A new instance of MIKMIDISequence containing the MIDI data, or nil if an error occurred.
  */
 - (nullable instancetype)initWithData:(NSData *)data DEPRECATED_ATTRIBUTE;
 
