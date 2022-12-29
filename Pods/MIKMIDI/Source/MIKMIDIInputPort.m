@@ -209,7 +209,7 @@
 	return result;
 }
 
-#pragma mark Coaelescing
+#pragma mark Coalescing
 
 - (BOOL)commandIsPossibleMSBOf14BitCommand:(MIKMIDICommand *)command
 {
