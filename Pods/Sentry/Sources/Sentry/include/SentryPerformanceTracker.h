@@ -32,7 +32,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  * Activate the span with `spanId`
  * to create any call to startSpan as a child.
- * If the there is no span with the fiven spanId
+ * If the there is no span with the given spanId
  * block is executed anyway.
  *
  * @param spanId Id of the span to activate
