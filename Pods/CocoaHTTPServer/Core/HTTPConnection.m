@@ -2533,7 +2533,7 @@ static NSMutableArray *recentNonces;
 
 /**
  * This method is called if the response encounters some critical error,
- * and it will be unable to fullfill the request.
+ * and it will be unable to fulfill the request.
 **/
 - (void)responseDidAbort:(NSObject<HTTPResponse> *)sender
 {
