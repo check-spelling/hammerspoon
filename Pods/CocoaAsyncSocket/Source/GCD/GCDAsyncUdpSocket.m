@@ -1274,7 +1274,7 @@ enum GCDAsyncUdpSocketConfig
 
 /**
  * This method picks an address from the given list of addresses.
- * The address picked depends upon which protocols are disabled, deactived, & preferred.
+ * The address picked depends upon which protocols are disabled, deactivated, & preferred.
  * 
  * Returns the address family (AF_INET or AF_INET6) of the picked address,
  * or AF_UNSPEC and the corresponding error is there's a problem.
