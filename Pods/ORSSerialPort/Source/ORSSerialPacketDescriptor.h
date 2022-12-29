@@ -216,7 +216,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
 @property (nonatomic, strong, readonly, nullable) NSRegularExpression *regularExpression;
 
 /**
- *  The maximum lenght of a packet described by the receiver.
+ *  The maximum length of a packet described by the receiver.
  */
 @property (nonatomic, readonly) NSUInteger maximumPacketLength;
 
