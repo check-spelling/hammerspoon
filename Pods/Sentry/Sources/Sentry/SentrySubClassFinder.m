@@ -71,7 +71,7 @@ SentrySubClassFinder ()
         for (NSInteger i = 0; i < numClasses; i++) {
             Class superClass = classes[i];
 
-            // Don't add the parent class to list of sublcasses
+            // Don't add the parent class to list of subclasses
             if (superClass == parentClass) {
                 continue;
             }
