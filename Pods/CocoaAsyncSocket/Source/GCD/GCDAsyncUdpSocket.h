@@ -845,7 +845,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * Any pending send operations are discarded.
  * 
  * The GCDAsyncUdpSocket instance may optionally be used again.
- *   (it will setup/configure/use another unnderlying BSD socket).
+ *   (it will setup/configure/use another underlying BSD socket).
 **/
 - (void)close;
 
@@ -853,7 +853,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * Closes the underlying socket after all pending send operations have been sent.
  * 
  * The GCDAsyncUdpSocket instance may optionally be used again.
- *   (it will setup/configure/use another unnderlying BSD socket).
+ *   (it will setup/configure/use another underlying BSD socket).
 **/
 - (void)closeAfterSending;
 
