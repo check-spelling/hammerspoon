@@ -111,7 +111,7 @@ typedef NS_ENUM(NSInteger, PSWebSocketReadyState) {
  *  Send a ping over the websocket
  *
  *  @param pingData data to include with the ping
- *  @param handler  optional callback handler when the corrosponding pong is received
+ *  @param handler  optional callback handler when the corresponding pong is received
  */
 - (void)ping:(NSData *)pingData handler:(void (^)(NSData *pongData))handler;
 
