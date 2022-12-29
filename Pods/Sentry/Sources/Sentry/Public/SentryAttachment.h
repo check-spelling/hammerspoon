@@ -30,7 +30,7 @@ SENTRY_NO_INIT
                  contentType:(NSString *)contentType;
 
 /**
- * Initializes an attachment with a path. Uses the last path compontent of the path as a filename
+ * Initializes an attachment with a path. Uses the last path component of the path as a filename
  * and sets the content type to "application/octet-stream".
  *
  * @discussion The file located at the pathname is read lazily when the SDK captures an event or
