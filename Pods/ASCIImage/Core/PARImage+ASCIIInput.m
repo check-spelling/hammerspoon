@@ -115,7 +115,7 @@ NSString * const ASCIIContextShouldAntialias    = @"ASCIIContextShouldAntialias"
     }
     
     // pixels should be regularly spaced: the actual gap is the greater common divisor
-    // no need to make that a fancy algorithm, let's just enumarate all possible values going down, and including, the smallest gap
+    // no need to make that a fancy algorithm, let's just enumerate all possible values going down, and including, the smallest gap
     NSUInteger smallestGap = gaps.firstIndex;
     if (smallestGap == NSNotFound)
         smallestGap = 1;
