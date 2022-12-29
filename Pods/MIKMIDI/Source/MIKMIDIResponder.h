@@ -49,7 +49,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)respondsToMIDICommand:(MIKMIDICommand *)command;
 
 /**
- *  The primary method used for MIDI message/command handling. Implmenent the real
+ *  The primary method used for MIDI message/command handling. Implement the real
  *
  *  This method is only called if the preceeding call to -respondsToMIDICommand: returns YES.
  *
