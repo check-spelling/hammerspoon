@@ -50,7 +50,7 @@ static NSUncaughtExceptionHandler *g_previousUncaughtExceptionHandler;
 #pragma mark - Callbacks -
 // ============================================================================
 
-/** Our custom excepetion handler.
+/** Our custom exception handler.
  * Fetch the stack trace from the exception and write a report.
  *
  * @param exception The exception that was raised.
