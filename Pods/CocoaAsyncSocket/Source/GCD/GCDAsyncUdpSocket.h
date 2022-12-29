@@ -260,7 +260,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * entire datagram is lost).  You are much better off sending a large number of smaller
  * UDP datagrams, preferably using a path MTU algorithm to avoid fragmentation.
  *
- * You must set it before the sockt is created otherwise it won't work.
+ * You must set it before the socket is created otherwise it won't work.
  *
  **/
 - (uint16_t)maxSendBufferSize;
