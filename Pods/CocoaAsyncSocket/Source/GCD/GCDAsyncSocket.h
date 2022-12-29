@@ -712,7 +712,7 @@ typedef NS_ERROR_ENUM(GCDAsyncSocketErrorDomain, GCDAsyncSocketError) {
  *     
  *     Thus all the other keys in the given dictionary will be ignored by GCDAsyncSocket,
  *     and will passed directly CFReadStreamSetProperty / CFWriteStreamSetProperty.
- *     For more infomation on these keys, please see the documentation for kCFStreamPropertySSLSettings.
+ *     For more information on these keys, please see the documentation for kCFStreamPropertySSLSettings.
  *
  *     If unspecified, the default value is NO.
  *
