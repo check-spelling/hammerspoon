@@ -598,7 +598,7 @@ enum GCDAsyncSocketConfig
 	// 5. Removing underflow from prebuffer (memmove)
 	// 
 	// Comparing the performance of the two we can see that reading
-	// data into the prebuffer first is slower due to the extra memove.
+	// data into the prebuffer first is slower due to the extra memmove.
 	// 
 	// However:
 	// The implementation of NSMutableData is open source via core foundation's CFMutableData.
