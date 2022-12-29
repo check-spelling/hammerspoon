@@ -1079,7 +1079,7 @@ sentrycrashobjc_ivarNamed(const void *const classPtr, const char *name, SentryCr
     const struct ivar_list_t *ivars = getClassRO(classPtr)->ivars;
     uintptr_t ivarPtr = (uintptr_t)&ivars->first;
     const struct ivar_t *ivar = (void *)ivarPtr;
-    // For unknown reasons sometimes ivars is null and tests become flakey
+    // For unknown reasons sometimes ivars is null and tests become flaky
     if (ivars == NULL) {
         return false;
     }
