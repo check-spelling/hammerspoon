@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @param length The temporary length for the track.
  *  @param loopInfo The temporary loopInfo for the track.
  *
- *  @note You should not call this method. It is exclusivley used by MIKMIDISequence when the sequence is being looped by a MIKMIDIPlayer.
+ *  @note You should not call this method. It is exclusively used by MIKMIDISequence when the sequence is being looped by a MIKMIDIPlayer.
  */
 - (void)setTemporaryLength:(MusicTimeStamp)length andLoopInfo:(MusicTrackLoopInfo)loopInfo;
 
