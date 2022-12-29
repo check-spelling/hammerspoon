@@ -7,7 +7,7 @@
  * This is an asynchronous version of HTTPFileResponse.
  * It reads data from the given file asynchronously via GCD.
  * 
- * It may be overriden to allow custom post-processing of the data that has been read from the file.
+ * It may be overridden to allow custom post-processing of the data that has been read from the file.
  * An example of this is the HTTPDynamicFileResponse class.
 **/
 
