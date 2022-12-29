@@ -7368,7 +7368,7 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 		
 		__weak GCDAsyncSocket *weakSelf = self;
 		
-		void (^comletionHandler)(BOOL) = ^(BOOL shouldTrust){ @autoreleasepool {
+		void (^completionHandler)(BOOL) = ^(BOOL shouldTrust){ @autoreleasepool {
 		#pragma clang diagnostic push
 		#pragma clang diagnostic warning "-Wimplicit-retain-self"
 			
@@ -7395,7 +7395,7 @@ static OSStatus SSLWriteFunction(SSLConnectionRef connection, const void *data, 
 		{
 			dispatch_async(delegateQueue, ^{ @autoreleasepool {
 			
-				[theDelegate socket:self didReceiveTrust:trust completionHandler:comletionHandler];
+				[theDelegate socket:self didReceiveTrust:trust completionHandler:completionHandler];
 			}});
 		}
 		else
