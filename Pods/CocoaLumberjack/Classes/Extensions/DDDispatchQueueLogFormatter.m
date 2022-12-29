@@ -43,7 +43,7 @@
 
 - (instancetype)init {
     if ((self = [super init])) {
-        _mode = DDDispatchQueueLogFormatterModeShareble;
+        _mode = DDDispatchQueueLogFormatterModeShareable;
 
         // We need to carefully pick the name for storing in thread dictionary to not
         // use a formatter configured by subclass and avoid surprises.
@@ -139,7 +139,7 @@
 - (NSString *)stringFromDate:(NSDate *)date {
 
     NSDateFormatter *dateFormatter = nil;
-    if (_mode == DDDispatchQueueLogFormatterModeNonShareble) {
+    if (_mode == DDDispatchQueueLogFormatterModeNonShareable) {
         // Single-threaded mode.
 
         dateFormatter = _threadUnsafeDateFormatter;
@@ -266,7 +266,7 @@
 }
 
 - (void)didAddToLogger:(id <DDLogger>  __attribute__((unused)))logger {
-    NSAssert([_atomicLoggerCounter increment] <= 1 || _mode == DDDispatchQueueLogFormatterModeShareble, @"Can't reuse formatter with multiple loggers in non-shareable mode.");
+    NSAssert([_atomicLoggerCounter increment] <= 1 || _mode == DDDispatchQueueLogFormatterModeShareable, @"Can't reuse formatter with multiple loggers in non-shareable mode.");
 }
 
 - (void)willRemoveFromLogger:(id <DDLogger> __attribute__((unused)))logger {

@@ -30,12 +30,12 @@ typedef NS_ENUM(NSUInteger, DDDispatchQueueLogFormatterMode){
      *  This is the default option, means the formatter can be reused between multiple loggers and therefore is thread-safe.
      *  There is, of course, a performance cost for the thread-safety
      */
-    DDDispatchQueueLogFormatterModeShareble = 0,
+    DDDispatchQueueLogFormatterModeShareable = 0,
     /**
      *  If the formatter will only be used by a single logger, then the thread-safety can be removed
-     *  @note: there is an assert checking if the formatter is added to multiple loggers and the mode is non-shareble
+     *  @note: there is an assert checking if the formatter is added to multiple loggers and the mode is non-shareable
      */
-    DDDispatchQueueLogFormatterModeNonShareble,
+    DDDispatchQueueLogFormatterModeNonShareable,
 };
 
 
@@ -87,7 +87,7 @@ typedef NS_ENUM(NSUInteger, DDDispatchQueueLogFormatterMode){
 /**
  *  Initializer with ability to set the queue mode
  *
- *  @param mode choose between DDDispatchQueueLogFormatterModeShareble and DDDispatchQueueLogFormatterModeNonShareble, depending if the formatter is shared between several loggers or not
+ *  @param mode choose between DDDispatchQueueLogFormatterModeShareable and DDDispatchQueueLogFormatterModeNonShareable, depending if the formatter is shared between several loggers or not
  */
 - (instancetype)initWithMode:(DDDispatchQueueLogFormatterMode)mode;
 
