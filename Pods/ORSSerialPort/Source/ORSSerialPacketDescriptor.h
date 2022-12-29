@@ -111,7 +111,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *
  *  @note Either prefix or suffix may be nil, but not both. If the suffix is nil,
  *  packets will be considered to consist solely of prefix. If either value is nil, packets
- *  will be considered to consist soley of the the non-nil value.
+ *  will be considered to consist solely of the the non-nil value.
  *
  *  @param prefix   An NSData instance containing a fixed packet prefix. May be nil.
  *  @param suffix   An NSData instance containing a fixed packet suffix. May be nil.
@@ -136,7 +136,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *
  *  @note Either prefixString or suffixString may be nil, but not both. If the suffix is nil,
  *  packets will be considered to consist solely of prefix. If either value is nil, packets
- *  will be considered to consist soley of the the non-nil value.
+ *  will be considered to consist solely of the the non-nil value.
  *
  *  @param prefixString A fixed packet prefix string. May be nil.
  *  @param suffixString A fixed packet suffix string. May be nil.
