@@ -385,7 +385,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  A MusicTimeStamp that is less than the sequence's length, but is at an equivalent position in the looped sequence as loopedTimeStamp
  *
- *  When the music sequence is being looped by an MIKMIDIPlayer, the time stamp of the player continuosly increases. This method can be
+ *  When the music sequence is being looped by an MIKMIDIPlayer, the time stamp of the player continuously increases. This method can be
  *  used to find where in the MIDI sequence the looped playback is at. For example, in a sequence with a length of 16,
  *  calling this method with a loopedTimeStamp of 17 would return 1.
  *
