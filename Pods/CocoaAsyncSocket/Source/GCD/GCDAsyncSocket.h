@@ -1184,7 +1184,7 @@ typedef NS_ERROR_ENUM(GCDAsyncSocketErrorDomain, GCDAsyncSocketError) {
  * 
  * asyncSocket = nil; // I'm implicitly disconnecting the socket
  * 
- * In this case it may preferrable to nil the delegate beforehand, like this:
+ * In this case it may preferable to nil the delegate beforehand, like this:
  * 
  * asyncSocket.delegate = nil; // Don't invoke my delegate method
  * asyncSocket = nil; // I'm implicitly disconnecting the socket
