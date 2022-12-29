@@ -223,7 +223,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 
 				if( nil == currentHeader ) {
 					// we've found the data is in wrong format.
-					HTTPLogError(@"MultipartFormDataParser: MultipartFormDataParser: wrong input format, coulnd't get a valid header");
+					HTTPLogError(@"MultipartFormDataParser: MultipartFormDataParser: wrong input format, couldn't get a valid header");
 					return NO;
 				}
                 if( [delegate respondsToSelector:@selector(processStartOfPartWithHeader:)] ) {
