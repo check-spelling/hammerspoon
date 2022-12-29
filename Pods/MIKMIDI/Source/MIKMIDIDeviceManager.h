@@ -60,7 +60,7 @@ extern NSString * const MIKMIDIEndpointKey;
  *  are KVO compliant, meaning they can be observed using KVO for changes, and (on OS X) can be bound to UI
  *  elements using Cocoa bindings.
  *
- *  MIKMIDIDeviceManager is also used to connect to and disonnect from MIDI endpoints, as well as to send and receive MIDI
+ *  MIKMIDIDeviceManager is also used to connect to and disconnect from MIDI endpoints, as well as to send and receive MIDI
  *  messages. To connect to a MIDI source endpoint, call -connectInput:error:eventHandler:. To disconnect, call -disconnectInput:.
  *  To send MIDI messages/commands to an output endpoint, call -sendCommands:toEndpoint:error:.
  */
