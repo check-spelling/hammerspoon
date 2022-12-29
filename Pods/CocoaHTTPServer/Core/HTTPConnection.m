@@ -2031,7 +2031,7 @@ static NSMutableArray *recentNonces;
 				// This could be an attempted DOS attack
 				[asyncSocket disconnect];
 				
-				// Explictly return to ensure we don't do anything after the socket disconnect
+				// Explicitly return to ensure we don't do anything after the socket disconnect
 				return;
 			}
 			else
@@ -2298,7 +2298,7 @@ static NSMutableArray *recentNonces;
 				// This could be an attempted DOS attack
 				[asyncSocket disconnect];
 				
-				// Explictly return to ensure we don't do anything after the socket disconnect
+				// Explicitly return to ensure we don't do anything after the socket disconnect
 				return;
 			}
 			
@@ -2431,7 +2431,7 @@ static NSMutableArray *recentNonces;
 			// Terminate the connection
 			[asyncSocket disconnect];
 			
-			// Explictly return to ensure we don't do anything after the socket disconnects
+			// Explicitly return to ensure we don't do anything after the socket disconnects
 			return;
 		}
 		else

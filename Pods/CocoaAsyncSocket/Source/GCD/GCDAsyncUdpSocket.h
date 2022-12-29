@@ -968,7 +968,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  * See the documentation for the performBlock: method above.
  * 
  * Provides access to the socket's file descriptor(s).
- * If the socket isn't connected, or explicity bound to a particular interface,
+ * If the socket isn't connected, or explicitly bound to a particular interface,
  * it might actually have multiple internal socket file descriptors - one for IPv4 and one for IPv6.
 **/
 - (int)socketFD;

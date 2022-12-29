@@ -6303,7 +6303,7 @@ enum GCDAsyncSocketConfig
 	}
 	
 	// We're done with our writing.
-	// If we explictly ran into a situation where the socket told us there was no room in the buffer,
+	// If we explicitly ran into a situation where the socket told us there was no room in the buffer,
 	// then we immediately resume listening for notifications.
 	// 
 	// We must do this before we dequeue another write,
