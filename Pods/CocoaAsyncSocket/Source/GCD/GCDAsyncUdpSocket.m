@@ -5463,7 +5463,7 @@ Failed:
 //		return NO;
 //	}
 //	
-//	LogVerbose(@"Enabling backgrouding on socket");
+//	LogVerbose(@"Enabling backgrounding on socket");
 //	
 //	BOOL r1, r2;
 //	

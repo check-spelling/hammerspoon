@@ -8193,7 +8193,7 @@ static void CFWriteStreamCallback (CFWriteStreamRef stream, CFStreamEventType ty
 	
 	BOOL r1, r2;
 	
-	LogVerbose(@"Enabling backgrouding on socket");
+	LogVerbose(@"Enabling backgrounding on socket");
 	
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wdeprecated-declarations"
