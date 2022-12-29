@@ -73,7 +73,7 @@ NSString* extractParamValue(const char* bytes, NSUInteger length, NSStringEncodi
 	
 	value = [[NSString alloc] initWithBytes:bytes length: separatorOffset encoding:encoding];
 	HTTPLogVerbose(@"MultipartFormDataParser: Processing  header field '%@' : '%@'",name,value);
-	// skipe the separator and the next ' ' symbol
+	// skip the separator and the next ' ' symbol
 	bytes += separatorOffset + 2;
 	length -= separatorOffset + 2;
 
