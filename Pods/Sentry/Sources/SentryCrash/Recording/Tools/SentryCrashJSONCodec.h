@@ -333,7 +333,7 @@ int sentrycrashjson_beginElement(
     SentryCrashJSONEncodeContext *const context, const char *const name);
 
 /** Add JSON data manually.
- * This function just passes your data directly through, even if it's malforned.
+ * This function just passes your data directly through, even if it's malformed.
  *
  * @param context The encoding context.
  *
