@@ -98,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, nullable) NSDictionary *additionalAttributes;
 
 /**
- *  The MIDI Mapping the receiver belongs to. May be nil if the mappping item hasn't been added to a mapping yet,
+ *  The MIDI Mapping the receiver belongs to. May be nil if the mapping item hasn't been added to a mapping yet,
  *  or its mapping has been deallocated.
  */
 @property (nonatomic, weak, readonly, nullable) MIKMIDIMapping *mapping;
