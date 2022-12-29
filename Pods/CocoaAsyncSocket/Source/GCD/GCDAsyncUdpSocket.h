@@ -116,7 +116,7 @@ typedef NS_ERROR_ENUM(GCDAsyncUdpSocketErrorDomain, GCDAsyncUdpSocketError) {
  *                  pass the parsed data to the delegate.
  * 
  * @returns - YES if the received packet should be passed onto the delegate.
- *            NO if the received packet should be discarded, and not reported to the delegete.
+ *            NO if the received packet should be discarded, and not reported to the delegate.
  * 
  * Example:
  * 
