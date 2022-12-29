@@ -366,7 +366,7 @@ static NSMutableArray *recentNonces;
 
 /**
  * Returns the authentication realm.
- * In this generic implmentation, a default realm is used for the entire server.
+ * In this generic implementation, a default realm is used for the entire server.
 **/
 - (NSString *)realm
 {
