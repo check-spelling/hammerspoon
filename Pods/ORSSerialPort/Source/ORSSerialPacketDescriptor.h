@@ -74,7 +74,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *  This initializer can be used to creat a packet descriptor with complex packet matching
  *  rules. For most packet formats, the initializers that take prefix and suffix, or regular expression
  *  are easier to use. However, if the packet format cannot be described using a simple prefix/suffix
- *  or regular expression, a response evaulator block containing arbitrary validation code can be
+ *  or regular expression, a response evaluator block containing arbitrary validation code can be
  *  provided instead.
  *
  *  @param maxPacketLength The maximum length of a valid packet. This value _must_ be correctly specified.
