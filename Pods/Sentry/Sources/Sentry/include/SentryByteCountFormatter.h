@@ -3,7 +3,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- * We need to have a standart description for bytes count
+ * We need to have a standard description for bytes count
  * but NSByteCountFormatter does not allow to choose locale
  * and the result changes according to the device configuration.
  * With our own formatter we can control the result.
