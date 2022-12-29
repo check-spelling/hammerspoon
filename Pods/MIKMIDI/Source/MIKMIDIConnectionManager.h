@@ -136,7 +136,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  Controls whether the receiver's availableDevices property includes virtual devices (i.e. devices made
  *  up of automatically paired virtual sources and destinations).
  *
- *  If this property is YES (the default), the connection manager will attempt to automtically related
+ *  If this property is YES (the default), the connection manager will attempt to automatically related
  *  associated virtual sources and destinations and create "virtual" MIKMIDIDevice instances for them.
  *
  *  If this property is NO, the connection manager's availableDevices array will _only_ contain non-virtual
