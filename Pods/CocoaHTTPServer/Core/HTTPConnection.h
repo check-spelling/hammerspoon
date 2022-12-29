@@ -53,7 +53,7 @@
 	
 	NSMutableArray *ranges;
 	NSMutableArray *ranges_headers;
-	NSString *ranges_boundry;
+	NSString *ranges_boundary;
 	int rangeIndex;
 	
 	UInt64 requestContentLength;

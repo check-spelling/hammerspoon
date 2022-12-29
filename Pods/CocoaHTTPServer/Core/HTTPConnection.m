@@ -1037,7 +1037,7 @@ static NSMutableArray *recentNonces;
 	HTTPMessage *response = [[HTTPMessage alloc] initResponseWithStatusCode:206 description:nil version:HTTPVersion1_1];
 	
 	// We have to send each range using multipart/byteranges
-	// So each byterange has to be prefix'd and suffix'd with the boundry
+	// So each byterange has to be prefix'd and suffix'd with the boundary
 	// Example:
 	// 
 	// HTTP/1.1 206 Partial Content
@@ -1058,11 +1058,11 @@ static NSMutableArray *recentNonces;
 	ranges_headers = [[NSMutableArray alloc] initWithCapacity:[ranges count]];
 	
 	CFUUIDRef theUUID = CFUUIDCreate(NULL);
-	ranges_boundry = (__bridge_transfer NSString *)CFUUIDCreateString(NULL, theUUID);
+	ranges_boundary = (__bridge_transfer NSString *)CFUUIDCreateString(NULL, theUUID);
 	CFRelease(theUUID);
 	
-	NSString *startingBoundryStr = [NSString stringWithFormat:@"\r\n--%@\r\n", ranges_boundry];
-	NSString *endingBoundryStr = [NSString stringWithFormat:@"\r\n--%@--\r\n", ranges_boundry];
+	NSString *startingBoundaryStr = [NSString stringWithFormat:@"\r\n--%@\r\n", ranges_boundary];
+	NSString *endingBoundaryStr = [NSString stringWithFormat:@"\r\n--%@--\r\n", ranges_boundary];
 	
 	UInt64 actualContentLength = 0;
 	
@@ -1075,7 +1075,7 @@ static NSMutableArray *recentNonces;
 		NSString *contentRangeVal = [NSString stringWithFormat:@"bytes %@/%qu", rangeStr, contentLength];
 		NSString *contentRangeStr = [NSString stringWithFormat:@"Content-Range: %@\r\n\r\n", contentRangeVal];
 		
-		NSString *fullHeader = [startingBoundryStr stringByAppendingString:contentRangeStr];
+		NSString *fullHeader = [startingBoundaryStr stringByAppendingString:contentRangeStr];
 		NSData *fullHeaderData = [fullHeader dataUsingEncoding:NSUTF8StringEncoding];
 		
 		[ranges_headers addObject:fullHeaderData];
@@ -1084,14 +1084,14 @@ static NSMutableArray *recentNonces;
 		actualContentLength += range.length;
 	}
 	
-	NSData *endingBoundryData = [endingBoundryStr dataUsingEncoding:NSUTF8StringEncoding];
+	NSData *endingBoundaryData = [endingBoundaryStr dataUsingEncoding:NSUTF8StringEncoding];
 	
-	actualContentLength += [endingBoundryData length];
+	actualContentLength += [endingBoundaryData length];
 	
 	NSString *contentLengthStr = [NSString stringWithFormat:@"%qu", actualContentLength];
 	[response setHeaderField:@"Content-Length" value:contentLengthStr];
 	
-	NSString *contentTypeStr = [NSString stringWithFormat:@"multipart/byteranges; boundary=%@", ranges_boundry];
+	NSString *contentTypeStr = [NSString stringWithFormat:@"multipart/byteranges; boundary=%@", ranges_boundary];
 	[response setHeaderField:@"Content-Type" value:contentTypeStr];
 	
 	return response;
@@ -1521,11 +1521,11 @@ static NSMutableArray *recentNonces;
 		}
 		else
 		{
-			// We're not done yet - we still have to send the closing boundry tag
-			NSString *endingBoundryStr = [NSString stringWithFormat:@"\r\n--%@--\r\n", ranges_boundry];
-			NSData *endingBoundryData = [endingBoundryStr dataUsingEncoding:NSUTF8StringEncoding];
+			// We're not done yet - we still have to send the closing boundary tag
+			NSString *endingBoundaryStr = [NSString stringWithFormat:@"\r\n--%@--\r\n", ranges_boundary];
+			NSData *endingBoundaryData = [endingBoundaryStr dataUsingEncoding:NSUTF8StringEncoding];
 			
-			[asyncSocket writeData:endingBoundryData withTimeout:TIMEOUT_WRITE_HEAD tag:HTTP_RESPONSE];
+			[asyncSocket writeData:endingBoundaryData withTimeout:TIMEOUT_WRITE_HEAD tag:HTTP_RESPONSE];
 		}
 	}
 }
@@ -2581,7 +2581,7 @@ static NSMutableArray *recentNonces;
 	
 	ranges = nil;
 	ranges_headers = nil;
-	ranges_boundry = nil;
+	ranges_boundary = nil;
 }
 
 /**
