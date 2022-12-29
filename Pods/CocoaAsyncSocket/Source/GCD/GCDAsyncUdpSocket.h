@@ -543,7 +543,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  *     If passing NSMutableData, please read the thread-safety notice below.
  * 
  * @param timeout
- *    The timeout for the send opeartion.
+ *    The timeout for the send operation.
  *    If the timeout value is negative, the send operation will not use a timeout.
  * 
  * @param tag
@@ -592,7 +592,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  *    The port of the host to send to.
  * 
  * @param timeout
- *    The timeout for the send opeartion.
+ *    The timeout for the send operation.
  *    If the timeout value is negative, the send operation will not use a timeout.
  * 
  * @param tag
@@ -640,7 +640,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
  *     The address to send the data to (specified as a sockaddr structure wrapped in a NSData object).
  * 
  * @param timeout
- *    The timeout for the send opeartion.
+ *    The timeout for the send operation.
  *    If the timeout value is negative, the send operation will not use a timeout.
  * 
  * @param tag

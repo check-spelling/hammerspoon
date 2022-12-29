@@ -416,7 +416,7 @@ typedef NS_ERROR_ENUM(GCDAsyncSocketErrorDomain, GCDAsyncSocketError) {
 // When a write is complete the socket:didWriteDataWithTag: delegate method is dispatched on the delegateQueue.
 // 
 // You may optionally set a timeout for any read/write operation. (To not timeout, use a negative time interval.)
-// If a read/write opertion times out, the corresponding "socket:shouldTimeout..." delegate method
+// If a read/write operation times out, the corresponding "socket:shouldTimeout..." delegate method
 // is called to optionally allow you to extend the timeout.
 // Upon a timeout, the "socket:didDisconnectWithError:" method is called
 // 
