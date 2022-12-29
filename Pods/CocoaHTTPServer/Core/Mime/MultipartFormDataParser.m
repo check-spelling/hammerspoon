@@ -87,7 +87,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 
     int offset = 0;
 
-	// don't parse data unless its size is greater then boundary length, so we couldn't
+	// don't parse data unless its size is greater than boundary length, so we couldn't
 	// misfind the boundary, if it got split into different data chunks
 	NSUInteger sizeToLeavePending = boundaryData.length;
 
@@ -437,7 +437,7 @@ static const int httpLogLevel = HTTP_LOG_LEVEL_WARN;
 	}
 	
 	if( encoding == contentTransferEncoding_quotedPrintable ) {
-		// we don't pass more less then 3 bytes anyway.
+		// we don't pass more less than 3 bytes anyway.
 		if( length <= 2 ) 
 			return length;
 		// check the last bytes to be start of encoded symbol.
