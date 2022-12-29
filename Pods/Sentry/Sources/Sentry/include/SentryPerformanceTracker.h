@@ -7,7 +7,7 @@ NS_ASSUME_NONNULL_BEGIN
 @class SentrySpanId;
 
 /**
- * Tracks performance synchronizing span with its childs.
+ * Tracks performance synchronizing span with its children.
  * A span will be finished only when all its children are finished.
  */
 @interface SentryPerformanceTracker : NSObject
