@@ -51,7 +51,7 @@ SentrySubClassFinder ()
         }
 
         // Only for testing. We want to know in tests if the code iterated over the classes, because
-        // iterating in edge cases could lead to crashses. Ideally, we would wrap
+        // iterating in edge cases could lead to crashes. Ideally, we would wrap
         // class_getSuperclass in the SentryObjCRuntimeWrapper and count its invocations. As
         // class_getSuperclass is called in a tight loop doing so would slow down the code
         // significantly. This is pragmatic workaround to find out in tests if the code iterated
