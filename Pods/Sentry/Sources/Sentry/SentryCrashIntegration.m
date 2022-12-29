@@ -135,7 +135,7 @@ SentryCrashIntegration ()
         [self.crashedSessionHandler endCurrentSessionAsCrashedWhenCrashOrOOM];
 
         // We only need to send all reports on the first initialization of SentryCrash. If
-        // SenryCrash was deactivated there are no new reports to send. Furthermore, the
+        // SentryCrash was deactivated there are no new reports to send. Furthermore, the
         // g_reportsPath in SentryCrashReportsStore gets set when SentryCrash is installed. In
         // production usage, this path is not supposed to change. When testing, this path can
         // change, and therefore, the initial set g_reportsPath can be deleted. sendAllReports calls
