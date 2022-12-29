@@ -81,7 +81,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *  @param userInfo          An arbitrary userInfo object.
  *  @param responseEvaluator A block used to evaluate whether received data constitutes a valid packet.
  *
- *  @return An initizliaized ORSSerialPacketDesciptor instance.
+ *  @return An initizliaized ORSSerialPacketDescriptor instance.
  *
  *  @see -initWithPrefix:suffix:maximumPacketLength:userInfo:
  *  @see -initWithPrefixString:suffixString:maximumPacketLength:userInfo:
@@ -99,7 +99,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *  @param packetData	An NSData instance containing a fixed sequence of bytes making up a packet.
  *  @param userInfo		An arbitrary userInfo object. May be nil.
  *
- *  @return An initizliaized ORSSerialPacketDesciptor instance.
+ *  @return An initizliaized ORSSerialPacketDescriptor instance.
  */
 - (instancetype)initWithPacketData:(NSData *)packetData userInfo:(nullable id)userInfo;
 
@@ -118,7 +118,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *  @param maxPacketLength The maximum length of a valid packet. This value _must_ be correctly specified.
  *  @param userInfo An arbitrary userInfo object. May be nil.
  *
- *  @return An initizliaized ORSSerialPacketDesciptor instance.
+ *  @return An initizliaized ORSSerialPacketDescriptor instance.
  *
  *  @see -initWithPrefixString:suffixString:userInfo:
  */
@@ -143,7 +143,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *  @param maxPacketLength The maximum length of a valid packet. This value _must_ be correctly specified.
  *  @param userInfo     An arbitrary userInfo object. May be nil.
  *
- *  @return An initizliaized ORSSerialPacketDesciptor instance.
+ *  @return An initizliaized ORSSerialPacketDescriptor instance.
  *
  *  @see -initWithPrefix:suffix:maximumPacketLength:userInfo:
  */
@@ -166,7 +166,7 @@ typedef BOOL(^ORSSerialPacketEvaluator)(NSData * __nullable inputData);
  *  @param maxPacketLength The maximum length of a valid packet. This value _must_ be correctly specified.
  *  @param userInfo An arbitrary userInfoObject. May be nil.
  *
- *  @return An initizliaized ORSSerialPacketDesciptor instance.
+ *  @return An initizliaized ORSSerialPacketDescriptor instance.
  */
 - (instancetype)initWithRegularExpression:(NSRegularExpression *)regex
 					  maximumPacketLength:(NSUInteger)maxPacketLength
