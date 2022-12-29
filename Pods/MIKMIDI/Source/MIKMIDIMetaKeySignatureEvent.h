@@ -56,7 +56,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface MIKMIDIMetaKeySignatureEvent : MIKMIDIMetaEvent
 
 /**
- *  Initializes an instane of MIKMIDIMetaKeySignatureEvent with the specified musical key and timeStamp.
+ *  Initializes an instance of MIKMIDIMetaKeySignatureEvent with the specified musical key and timeStamp.
  *
  *  @param musicalKey The musical key for the event. See MIKMIDIMusicalKey for a list of possible values.
  *  @param timeStamp The time stamp for the event.
