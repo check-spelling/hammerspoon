@@ -37,7 +37,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable instancetype)sequence;
 
 /**
- *  Creates and initilazes a new instance of MIKMIDISequence from a MIDI file.
+ *  Creates and initializes a new instance of MIKMIDISequence from a MIDI file.
  *
  *  @param fileURL The URL of the MIDI file.
  *  @param error If an error occurs, upon returns contains an NSError object that describes the problem. If you are not interested in possible errors,
@@ -48,7 +48,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable instancetype)sequenceWithFileAtURL:(NSURL *)fileURL error:(NSError **)error;
 
 /**
- *  Creates and initilazes a new instance of MIKMIDISequence from a MIDI file.
+ *  Creates and initializes a new instance of MIKMIDISequence from a MIDI file.
  *
  *  @param fileURL The URL of the MIDI file.
  *  @param convertMIDIChannelsToTracks Determines whether or not the track structure should be altered. When YES, the resulting sequence will
@@ -62,7 +62,7 @@ NS_ASSUME_NONNULL_BEGIN
 + (nullable instancetype)sequenceWithFileAtURL:(NSURL *)fileURL convertMIDIChannelsToTracks:(BOOL)convertMIDIChannelsToTracks error:(NSError **)error;
 
 /**
- *  Initilazes a new instance of MIKMIDISequence from a MIDI file.
+ *  Initializes a new instance of MIKMIDISequence from a MIDI file.
  *
  *  @param fileURL The URL of the MIDI file.
  *  @param error If an error occurs, upon return contains an NSError object that describes the problem. If you are not interested in possible errors,
@@ -73,7 +73,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable instancetype)initWithFileAtURL:(NSURL *)fileURL error:(NSError **)error;
 
 /**
- *  Initilazes a new instance of MIKMIDISequence from a MIDI file.
+ *  Initializes a new instance of MIKMIDISequence from a MIDI file.
  *
  *  @param fileURL The URL of the MIDI file.
  *  @param convertMIDIChannelsToTracks Determines whether or not the track structure should be altered. When YES, the resulting sequence will
