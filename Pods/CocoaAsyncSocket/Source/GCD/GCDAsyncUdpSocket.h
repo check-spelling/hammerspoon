@@ -492,7 +492,7 @@ typedef BOOL (^GCDAsyncUdpSocketSendFilterBlock)(NSData *data, NSData *address, 
 
 /**
  * Send multicast on a specified interface.
- * For IPv4, interface should be the the IP address of the interface (eg @"192.168.10.1").
+ * For IPv4, interface should be the IP address of the interface (eg @"192.168.10.1").
  * For IPv6, interface should be the a network interface name (eg @"en0").
  *
  * On success, returns YES.

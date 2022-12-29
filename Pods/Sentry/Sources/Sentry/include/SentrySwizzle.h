@@ -198,7 +198,7 @@ typedef NS_ENUM(NSUInteger, SentrySwizzleMode) {
  Swizzles the instance method of the class with the new implementation.
 
  Original implementation must always be called from the new implementation. And
- because of the the fact that for safe and robust swizzling original
+ because of the fact that for safe and robust swizzling original
  implementation must be dynamically fetched at the time of calling and not at
  the time of swizzling, swizzling API is a little bit complicated.
 
@@ -293,7 +293,7 @@ typedef NS_ENUM(NSUInteger, SentrySwizzleMode) {
  Swizzles the class method of the class with the new implementation.
 
  Original implementation must always be called from the new implementation. And
- because of the the fact that for safe and robust swizzling original
+ because of the fact that for safe and robust swizzling original
  implementation must be dynamically fetched at the time of calling and not at
  the time of swizzling, swizzling API is a little bit complicated.
 

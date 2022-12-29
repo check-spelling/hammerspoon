@@ -259,7 +259,7 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)setTimeSignature:(MIKMIDITimeSignature)signature atTimeStamp:(MusicTimeStamp)timeStamp;
 
 /**
- *  Returns the time signature in effect at the the specified time stamp.
+ *  Returns the time signature in effect at the specified time stamp.
  *
  *  @param timeStamp The time stamp at which you would like to know the receiver's time signature.
  *
