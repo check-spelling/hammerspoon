@@ -8,27 +8,27 @@ function on_error {
 }
 trap 'on_error $LINENO' ERR
 
-# Used as a return value for each invocation of `strip_invalid_archs` function.
+# Used as a return value for each invocation of `strip_invalid_arches` function.
 STRIP_BINARY_RETVAL=0
 
 # Strip invalid architectures
-strip_invalid_archs() {
+strip_invalid_arches() {
   binary="$1"
   warn_missing_arch=${2:-true}
   # Get architectures for current target binary
-  binary_archs="$(lipo -info "$binary" | rev | cut -d ':' -f1 | awk '{$1=$1;print}' | rev)"
+  binary_arches="$(lipo -info "$binary" | rev | cut -d ':' -f1 | awk '{$1=$1;print}' | rev)"
   # Intersect them with the architectures we are building for
-  intersected_archs="$(echo ${ARCHS[@]} ${binary_archs[@]} | tr ' ' '\n' | sort | uniq -d)"
+  intersected_arches="$(echo ${ARCHS[@]} ${binary_arches[@]} | tr ' ' '\n' | sort | uniq -d)"
   # If there are no archs supported by this binary then warn the user
-  if [[ -z "$intersected_archs" ]]; then
+  if [[ -z "$intersected_arches" ]]; then
     if [[ "$warn_missing_arch" == "true" ]]; then
-      echo "warning: [CP] Vendored binary '$binary' contains architectures ($binary_archs) none of which match the current build architectures ($ARCHS)."
+      echo "warning: [CP] Vendored binary '$binary' contains architectures ($binary_arches) none of which match the current build architectures ($ARCHS)."
     fi
     STRIP_BINARY_RETVAL=1
     return
   fi
   stripped=""
-  for arch in $binary_archs; do
+  for arch in $binary_arches; do
     if ! [[ "${ARCHS}" == *"$arch"* ]]; then
       # Strip non-valid architectures in-place
       lipo -remove "$arch" -output "$binary" "$binary"
@@ -61,7 +61,7 @@ install_dsym() {
 
     # Strip invalid architectures from the dSYM.
     if [[ "$(file "$binary")" == *"Mach-O "*"dSYM companion"* ]]; then
-      strip_invalid_archs "$binary" "$warn_missing_arch"
+      strip_invalid_arches "$binary" "$warn_missing_arch"
     fi
     if [[ $STRIP_BINARY_RETVAL == 0 ]]; then
       # Move the stripped file into its final destination.
