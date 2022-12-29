@@ -10,7 +10,7 @@ static CFTimeInterval const SentryFrozenFrameThreshold = 0.7;
 static CFTimeInterval const SentryPreviousFrameInitalValue = -1;
 
 /**
- * Relaxed memoring ordering is typical for incrementing counters. This operation only requires
+ * Relaxed memory ordering is typical for incrementing counters. This operation only requires
  * atomicity but not ordering or synchronization.
  */
 static memory_order const SentryFramesMemoryOrder = memory_order_relaxed;
