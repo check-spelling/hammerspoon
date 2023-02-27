@@ -10,6 +10,10 @@ jobs:
   publish:
     name: "Process CI Results"
     runs-on: ubuntu-latest
+    permissions:
+      checks: write
+      pull-requests: write
+
     if: always()
 
     steps:
